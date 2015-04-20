@@ -1,0 +1,87 @@
+.table-responsive {
+	border: 0px;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {
+	background: $row-odd;
+}
+
+.table-striped>tbody>tr:nth-child(even)>td, .table-striped>tbody>tr:nth-child(even)>th {
+	background: $row-even;
+}
+
+table {
+	background: $table-bg;
+	border-top: 1px solid #404040 !important;
+
+	th {
+		background: $table-header-bg;
+		border-bottom: 0px !important;
+		color: $table-th-font-color;
+		vertical-align: middle !important;
+		cursor: pointer;
+
+		i  {
+			font-size: 0.9em;
+			margin-left: 5px;
+			color: $table-th-icon-font-color;
+		}
+
+		&:hover {
+			color: $table-th-font-color + 50;
+
+			i {
+				color: $table-th-icon-font-color + 50;
+			}
+		}
+	}
+
+	td {
+		border-color: $table-border-color !important;
+		vertical-align: middle !important;
+	}
+
+	.even {
+		td {
+			background: $row-even;
+		}
+	}
+
+	.odd {
+		td {
+			background: $row-odd;
+		}
+	}
+
+	tr {
+		&:hover {
+			td {
+				background: $row-even + 30 !important;
+			}
+
+			button {
+				border: 1px solid $button-border-color + 50;
+			}
+		}
+	}
+
+	.th-options {
+		width: 15%;
+	}
+}
+
+.table-search-container {
+	input {
+		border: 0px !important;
+		border-top: 1px solid $search-border-color !important;
+	}
+
+	i {
+		right: 10px !important;
+		cursor: pointer;
+
+		&:hover {
+			color: $font-color + 50;
+		}
+	}
+}

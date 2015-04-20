@@ -1,0 +1,241 @@
+/**  
+ * Front End Framework
+ * 
+ * LICENSE description
+ *
+ * @author     	Stratpoint Global Outsourcing
+ * @copyright  	2015, Stratpoint Global Outsourcing
+ * @version    	Version 1.0
+ * @see        	ReadMe for file structure reference
+ * @access 		Use at your own risk
+ * @static
+ */
+
+/* BASE */
+/* @import 'base/reset'; */
+@import 'base/typography';
+/* END BASE */
+
+/* HELPERS */
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'helpers/functions';
+@import 'helpers/placeholders';
+@import 'helpers/helpers';
+/* END HELPERS */
+
+/* COMPONENTS */
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/navigation';
+/* END COMPONENTS */
+
+/* LAYOUTS */
+@import 'layouts/grid';
+@import 'layouts/header';
+@import 'layouts/footer';
+@import 'layouts/sidebar';
+/* END LAYOUTS */
+
+/* PAGES */
+@import 'pages/home';
+@import 'pages/contact';
+/* END PAGES */
+
+.is-hidden {
+    display: none;
+}
+
+.active {
+    background: #ffffff;
+    color: #404040;
+    border: 0px;
+}
+
+.active:hover {
+    background: #ffffff;
+    color: #404040;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: bold;
+}
+
+i {
+    font-size: 0.9em;
+    color: #909090;
+}
+
+pre {
+    background: transparent;
+    border: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: -10px;
+    font-size: 0.9em;
+}
+
+.sidebar {
+	position: fixed;
+	z-index: 1;
+	top: 0px;
+	left: 0px;
+	background: #202020;
+	height: 100%;
+	padding: 0px;
+
+	.sidebar-title-container {
+		margin-top: 50px;
+		color: #3b3b3b;
+		text-align: right;
+		background: #101010;
+		padding: 5px 18px 5px 0px;
+
+		i {
+			background: #544BA6;
+			padding: 8px;
+			border-radius: 50%;
+			color: #201866;
+			font-size: 0.7em;
+			margin-right: 5px;
+		}
+	}
+
+	ul {
+		padding: 0px;
+		list-style: none;
+		color: #a0a0a0;
+	}
+}
+
+.sidebar-container {
+	background: #0a0a0a;
+	top: 0px;
+	right: 0px;
+	position: fixed;
+	height: 100%;
+	padding: 0px;
+}
+
+aside ul li {
+    padding: 10px 20px 10px 0px;
+    font-weight: bold;
+    text-align: right;
+    cursor: pointer;
+    border-bottom: 1px solid #101010;
+	border-top: 1px solid #333333;
+}
+
+aside ul li:hover {
+    background: #404040;
+    color: #f0f0f0;
+}
+
+.request, .response {
+    background: #1a1a1a;
+    border: 0px;
+    border-radius: 0px;
+    padding: 10px 15px;
+    color: #808080;
+    font-size: 0.9em;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 400px;
+}
+
+aside ul li:last-child {
+    border-bottom: 0px;
+}
+
+.response-title {
+    color: #ffffff;
+    border-bottom: 1px solid #064008;
+    border-top: 1px solid #6ADE6A;
+    background: #2E8F31;
+    padding: 7px 10px;
+    cursor: pointer;
+
+    i {
+    	font-size: 1.2em; 
+	    float: right;  
+	    color: #5CB55F;
+    }
+}
+
+.response-title:hover {
+    background: #4EAD51;
+}
+
+.request-title {
+    color: #f0f0f0;
+    border-bottom: 1px solid #090B4D;
+    border-top: 1px solid #6E61BD;
+    background: #2A2D8C;
+    padding: 7px 10px;
+    cursor: pointer;
+
+    i {
+    	font-size: 1.2em; 
+	    float: right;  
+	    color: #5458C4;
+    }
+}
+
+.request-title:hover {
+    background: #4B4FBD;
+}
+
+.pill {
+    background: #303030;
+    color: #f0f0f0;
+    padding: 3px 5px;
+    border-radius: 3px;
+    font-size: 0.8em;
+}
+
+.pill-green {
+    background: #2E8F31;
+}
+
+.section-container {
+	margin-top: 60px;
+	padding:0px 30px;
+
+	.section-description {
+		padding-bottom: 10px;
+		border-bottom: 3px solid #d2d3d4;
+	}
+
+	.endpoint-container {
+		overflow-x: auto;
+		white-space: nowrap;
+		padding-bottom: 5px;
+	}
+
+	.endpoint-title {
+		margin-top: 40px;
+	}
+}
+
+.section-container-sidebar {
+	background: #0a0a0a;
+	height: 100%;
+	padding: 0px;
+
+	.separator {
+		height: 50px;
+		width: 100%;
+	}
+}
+
+.section-separator {
+	height: 200px;
+}
+
+.request-data-container {
+    color: #6367C7;
+}
+
+.response-data-container {
+    color: #63B065;
+}

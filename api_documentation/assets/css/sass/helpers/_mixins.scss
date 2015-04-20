@@ -1,0 +1,67 @@
+/* 
+	Description: Mixin for border-radius
+	Parameter: Radius 
+*/
+@mixin border-radius($radius: 5px) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+	background-clip: padding-box;
+}
+
+/* 
+	Description: Mixin for box-shadow
+	Parameters: Size and color 
+*/
+@mixin box-shadow($size: 1px 2px 3px, $color: #000000) {
+	-webkit-box-shadow: $size $color;
+	-moz-box-shadow: $size $color;
+	box-shadow: $size $color;
+}
+
+/* 
+	Description: Mixin for background size cover
+	Parameter: None
+*/
+@mixin background-size-cover() {
+	width: 100%;
+    background-position: center center;
+	-moz-background-size: cover;
+  	-webkit-background-size: cover;
+ 	-o-background-size: cover;
+  	background-size: cover;
+  	background-repeat: no-repeat;
+}
+
+/* 
+	Description: Mixin for opacity
+	Parameter: Opacity 
+*/
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+/* 
+	Description: Mixin for making a triangle
+	Parameter: Size, color, and direction (up, down, left, right) 
+*/
+@mixin triangle($size:10px, $color:#ffffff, $direction:right){
+	width: 0px;
+	height: 0px;
+	border: $size solid transparent;
+
+	@if $direction == 'right' {
+		border-left: $size solid $color;
+	}
+	@else if $direction == 'left' {
+		border-right: $size solid $color;
+	}
+	@else if $direction == 'up' {
+		border-bottom: $size solid $color;
+	}
+	@else if $direction == 'down' {
+		border-top: $size solid $color;
+	}
+}

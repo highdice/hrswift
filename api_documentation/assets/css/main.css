@@ -1,0 +1,332 @@
+/**  
+ * Front End Framework
+ * 
+ * LICENSE description
+ *
+ * @author     	Stratpoint Global Outsourcing
+ * @copyright  	2015, Stratpoint Global Outsourcing
+ * @version    	Version 1.0
+ * @see        	ReadMe for file structure reference
+ * @access 		Use at your own risk
+ * @static
+ */
+/* BASE */
+/* @import 'base/reset'; */
+/* END BASE */
+/* HELPERS */
+/* GENERAL VARIABLES */
+/* END GENERAL VARIABLES*/
+/* COLORS */
+/* END COLORS */
+/* 
+	Description: Mixin for border-radius
+	Parameter: Radius 
+*/
+/* 
+	Description: Mixin for box-shadow
+	Parameters: Size and color 
+*/
+/* 
+	Description: Mixin for background size cover
+	Parameter: None
+*/
+/* 
+	Description: Mixin for opacity
+	Parameter: Opacity 
+*/
+/* 
+	Description: Mixin for making a triangle
+	Parameter: Size, color, and direction (up, down, left, right) 
+*/
+/* STATES */
+.is-hidden {
+  display: none !important; }
+
+.is-invisible {
+  visibility: hidden !important; }
+
+.is-shown {
+  display: normal !important; }
+
+.is-visible {
+  visibility: visible !important; }
+
+.is-active {
+  background: #ffffff !important;
+  color: #ffffff !important; }
+
+.is-inactive {
+  background: #000000 !important;
+  color: #000000 !important; }
+
+.is-left {
+  float: left !important; }
+
+.is-right {
+  float: right !important; }
+
+.is-text-left {
+  text-align: left !important; }
+
+.is-text-right {
+  text-align: right !important; }
+
+.is-text-center {
+  text-align: center !important; }
+
+/* END STATES */
+/* GENERAL CLASSES */
+.container {
+  width: 960px;
+  height: auto;
+  margin: 0px auto; }
+
+.row {
+  display: block; }
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+/* END GENERAL CLASSES */
+/* END HELPERS */
+/* COMPONENTS */
+/* END COMPONENTS */
+/* LAYOUTS */
+.row-fluid .lg-1, .row-fluid .md-1, .row-fluid .sm-1, .row-fluid .xs-1 {
+  width: 8.33%;
+  min-height: 100px; }
+.row-fluid .lg-2, .row-fluid .md-2, .row-fluid .sm-2, .row-fluid .xs-2 {
+  width: 16.66%;
+  min-height: 100px; }
+.row-fluid .lg-3, .row-fluid .md-3, .row-fluid .sm-3, .row-fluid .xs-3 {
+  width: 25%;
+  min-height: 100px; }
+.row-fluid .lg-4, .row-fluid .md-4, .row-fluid .sm-4, .row-fluid .xs-4 {
+  width: 33.33%;
+  min-height: 100px; }
+.row-fluid .lg-5, .row-fluid .md-5, .row-fluid .sm-5, .row-fluid .xs-5 {
+  width: 41.66%;
+  min-height: 100px; }
+.row-fluid .lg-6, .row-fluid .md-6, .row-fluid .sm-6, .row-fluid .xs-6 {
+  width: 50%;
+  min-height: 100px; }
+.row-fluid .lg-7, .row-fluid .md-7, .row-fluid .sm-7, .row-fluid .xs-7 {
+  width: 58.33%;
+  min-height: 100px; }
+.row-fluid .lg-8, .row-fluid .md-8, .row-fluid .sm-8, .row-fluid .xs-8 {
+  width: 66.66%;
+  min-height: 100px; }
+.row-fluid .lg-9, .row-fluid .md-9, .row-fluid .sm-9, .row-fluid .xs-9 {
+  width: 75%;
+  min-height: 100px; }
+.row-fluid .lg-10, .row-fluid .md-10, .row-fluid .sm-10, .row-fluid .xs-10 {
+  width: 83.33%;
+  min-height: 100px; }
+.row-fluid .lg-11, .row-fluid .md-11, .row-fluid .sm-11, .row-fluid .xs-11 {
+  width: 91.66%;
+  min-height: 100px; }
+.row-fluid .lg-12, .row-fluid .md-12, .row-fluid .sm-12, .row-fluid .xs-12 {
+  width: 100%;
+  min-height: 100px; }
+
+.lg-1, .md-1, .sm-1, .xs-1 {
+  width: 80px; }
+
+.lg-2, .md-2, .sm-2, .xs-2 {
+  width: 160px; }
+
+.lg-3, .md-3, .sm-3, .xs-3 {
+  width: 240px; }
+
+.lg-4, .md-4, .sm-4, .xs-4 {
+  width: 320px; }
+
+.lg-5, .md-5, .sm-5, .xs-5 {
+  width: 400px; }
+
+.lg-6, .md-6, .sm-6, .xs-6 {
+  width: 480px; }
+
+.lg-7, .md-7, .sm-7, .xs-7 {
+  width: 560px; }
+
+.lg-8, .md-8, .sm-8, .xs-8 {
+  width: 640px; }
+
+.lg-9, .md-9, .sm-9, .xs-9 {
+  width: 720px; }
+
+.lg-10, .md-10, .sm-10, .xs-10 {
+  width: 800px; }
+
+.lg-11, .md-11, .sm-11, .xs-11 {
+  width: 880px; }
+
+.lg-12, .md-12, .sm-12, .xs-12 {
+  width: 960px; }
+
+/* END LAYOUTS */
+/* PAGES */
+/* END PAGES */
+.is-hidden {
+  display: none; }
+
+.active {
+  background: #ffffff;
+  color: #404040;
+  border: 0px; }
+
+.active:hover {
+  background: #ffffff;
+  color: #404040; }
+
+h1, h2, h3, h4, h5 {
+  font-weight: bold; }
+
+i {
+  font-size: 0.9em;
+  color: #909090; }
+
+pre {
+  background: transparent;
+  border: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: -10px;
+  font-size: 0.9em; }
+
+.sidebar {
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  background: #202020;
+  height: 100%;
+  padding: 0px; }
+  .sidebar .sidebar-title-container {
+    margin-top: 50px;
+    color: #3b3b3b;
+    text-align: right;
+    background: #101010;
+    padding: 5px 18px 5px 0px; }
+    .sidebar .sidebar-title-container i {
+      background: #544BA6;
+      padding: 8px;
+      border-radius: 50%;
+      color: #201866;
+      font-size: 0.7em;
+      margin-right: 5px; }
+  .sidebar ul {
+    padding: 0px;
+    list-style: none;
+    color: #a0a0a0; }
+
+.sidebar-container {
+  background: #0a0a0a;
+  top: 0px;
+  right: 0px;
+  position: fixed;
+  height: 100%;
+  padding: 0px; }
+
+aside ul li {
+  padding: 10px 20px 10px 0px;
+  font-weight: bold;
+  text-align: right;
+  cursor: pointer;
+  border-bottom: 1px solid #101010;
+  border-top: 1px solid #333333; }
+
+aside ul li:hover {
+  background: #404040;
+  color: #f0f0f0; }
+
+.request, .response {
+  background: #1a1a1a;
+  border: 0px;
+  border-radius: 0px;
+  padding: 10px 15px;
+  color: #808080;
+  font-size: 0.9em;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 400px; }
+
+aside ul li:last-child {
+  border-bottom: 0px; }
+
+.response-title {
+  color: #ffffff;
+  border-bottom: 1px solid #064008;
+  border-top: 1px solid #6ADE6A;
+  background: #2E8F31;
+  padding: 7px 10px;
+  cursor: pointer; }
+  .response-title i {
+    font-size: 1.2em;
+    float: right;
+    color: #5CB55F; }
+
+.response-title:hover {
+  background: #4EAD51; }
+
+.request-title {
+  color: #f0f0f0;
+  border-bottom: 1px solid #090B4D;
+  border-top: 1px solid #6E61BD;
+  background: #2A2D8C;
+  padding: 7px 10px;
+  cursor: pointer; }
+  .request-title i {
+    font-size: 1.2em;
+    float: right;
+    color: #5458C4; }
+
+.request-title:hover {
+  background: #4B4FBD; }
+
+.pill {
+  background: #303030;
+  color: #f0f0f0;
+  padding: 3px 5px;
+  border-radius: 3px;
+  font-size: 0.8em; }
+
+.pill-green {
+  background: #2E8F31; }
+
+.section-container {
+  margin-top: 60px;
+  padding: 0px 30px; }
+  .section-container .section-description {
+    padding-bottom: 10px;
+    border-bottom: 3px solid #d2d3d4; }
+  .section-container .endpoint-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 5px; }
+  .section-container .endpoint-title {
+    margin-top: 40px; }
+
+.section-container-sidebar {
+  background: #0a0a0a;
+  height: 100%;
+  padding: 0px; }
+  .section-container-sidebar .separator {
+    height: 50px;
+    width: 100%; }
+
+.section-separator {
+  height: 200px; }
+
+.request-data-container {
+  color: #6367C7; }
+
+.response-data-container {
+  color: #63B065; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,38 @@
+/* STATES */
+.is-hidden { display: none !important; }
+.is-invisible { visibility: hidden !important; }
+
+.is-shown { display: normal !important; }
+.is-visible { visibility: visible !important; }
+
+.is-active { background: $background-color-active !important; color: $font-color-active !important; }
+.is-inactive { background: $background-color-inactive !important; color: $font-color-inactive !important; }
+
+.is-left { float: left !important; }
+.is-right { float: right !important; }
+
+.is-text-left { text-align: left !important; }
+.is-text-right { text-align: right !important; }
+.is-text-center { text-align: center !important; }
+/* END STATES */
+
+/* GENERAL CLASSES */
+.container {
+	width: 960px;
+	height: auto;
+	margin: 0px auto;
+}
+
+.row {
+	display: block;
+}
+
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+/* END GENERAL CLASSES */

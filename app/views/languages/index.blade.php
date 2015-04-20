@@ -1,0 +1,1 @@
+C:\xampp\htdocs\hrswift\app/views/languages/index.blade.php

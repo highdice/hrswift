@@ -1,0 +1,48 @@
+button, input[type="button"], .btn-primary, .btn-default, .btn-xs {
+	background: $button-bg;
+	border: 1px solid $button-border-color;
+	color: $font-color;
+	text-shadow: none;
+
+	&:hover {
+		background: $button-bg + 50;
+		border: 1px solid $button-border-color;
+		color: $font-color;
+	}
+}
+
+.btn-link {
+	color: $font-color;
+	
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.button-crud {
+	width: 30px;
+	height: 30px;
+	margin-right: -2px !important;
+
+	i {
+		margin-top: 2px;
+	}
+
+	.crud-add-icon {
+		margin-left: 1px;
+	}
+
+	.crud-delete-icon {
+		margin-left: -2px;
+	}
+}
+
+.btn-default.disabled {
+	background-color: $button-bg + 10;
+	border-color: $button-border-color - 10;
+}
+
+.pagination-icon {
+	top: 2px !important;
+	color: $pagination-icon-font-color;
+}
