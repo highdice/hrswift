@@ -34,4 +34,9 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
                         ->get();
 	}
 
+	public static function authenticateUser($token) {
+		return User::where('token', $token)
+	    				->first();
+	}
+
 }

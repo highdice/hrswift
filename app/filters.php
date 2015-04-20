@@ -54,6 +54,19 @@ Route::filter('auth.basic', function()
 	return Auth::basic('username');
 });
 
+Route::filter('auth.token', function($route, $request)
+{
+    $token = md5($request->header('Authorization'));
+
+    $user = User::authenticateUser($token);
+
+    if(!$token || !$user) {
+        $response = Response::json(array('status' => 401, 'message' => 'Unauthorized'), 401);
+        $response->header('Content-Type', 'application/json');
+    	return $response;
+    }
+});
+
 /*
 |--------------------------------------------------------------------------
 | Guest Filter

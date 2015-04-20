@@ -54,13 +54,12 @@ Route::group(array('before' => 'auth'), function()
 });
 
 //API ROUTES
-//'before' => 'auth.token'
-Route::group(array('prefix' => 'api/v1'), function () {
+Route::group(array('before' => 'auth.token', 'prefix' => 'api/v1'), function () {
 	
-	/* For mobile data tables */
+	/* For users table */
 	Route::group(array('prefix' => 'user'), function () {
 		Route::get('/', 'UsersController@getAll');
 		Route::get('/{id?}', 'UsersController@getSingle');
 	});
-	/* /For mobile data tables */
+	/* /For users table */
 });
