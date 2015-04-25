@@ -36,24 +36,29 @@
                     </div>
                 </p>
 
+                <h5>API URL:</h5>
+                <p>STAGING: http://hrswift.com/hrswift</p>
+                <p>PRODUCTION: http://hrswift.com</p>
+                <br />
+
                 <h5>SHELL</h5>
-                <p>curl -X GET -H "Authorization: Basic token" http://<span class="pill pill-green">API URL</span>/HRSwift/public/api/v1/mobile_data/access_network_kpi</p>
+                <p>curl -X GET -H "Authorization: token" http://<span class="pill pill-green">API URL</span>/api/v1/user</p>
 
                 <br />
                 <h5>PHP</h5>
-                <p>You can build the 'Authorization' header in PHP by doing 'Basic ' + base_64_encode($username . ':' . $password)</p>
+                <p>You can build the 'Authorization' header in PHP by doing base_64_encode($username . ':' . $password)</p>
 
                 <br />
                 <h5>Javascript</h5>
-                <p>You can build the 'Authorization' header in javascript by doing 'Basic ' + btoa(username + ':' + password')</p>
+                <p>You can build the 'Authorization' header in javascript by doing btoa(username + ':' + password')</p>
                 <br />
                 <p><b>Sample Script</b></p>
                 <p>
                     $.ajax({<br/>
-                      &nbsp;&nbsp;url: 'http://<span class="pill pill-green">API URL</span>/HRSwift/public/api/v1/mobile_data/access_network_kpi',<br/>
+                      &nbsp;&nbsp;url: 'http://<span class="pill pill-green">API URL</span>/api/v1/user',<br/>
                       &nbsp;&nbsp;type: 'GET',<br/>
                       &nbsp;&nbsp;beforeSend: function(xhr) {<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;xhr.setRequestHeader('Authorization', 'Basic ' + token) <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;xhr.setRequestHeader('Authorization', token) <br/>
                       &nbsp;&nbsp;},<br/>
                       &nbsp;&nbsp;success: function(data) {<br/>
                         &nbsp;&nbsp;&nbsp;&nbsp;console.log(data);<br/>

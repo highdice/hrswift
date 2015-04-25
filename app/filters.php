@@ -56,8 +56,8 @@ Route::filter('auth.basic', function()
 
 Route::filter('auth.token', function($route, $request)
 {
-    $token = base64_encode('admin:hrswiftadmin123');
-    //$token = $request->header('Authorization');
+    //$token = base64_encode('admin:hrswiftadmin123');
+    $token = $request->header('Authorization');
 
     if($token) {
 	    $data = base64_decode($token);

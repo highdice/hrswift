@@ -50,8 +50,7 @@
                 <li><a href="mobile_data.php">Mobile Data</a></li>
                 <li><a href="mobile_voice_sms.php">Mobile Voice & SMS</a></li>
                 -->
-                <li><a href="#">Users</a></li>
-                <li><a href="#">VIP</a></li>
+                <li><a href="users.php">Users</a></li>
               </ul>
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
