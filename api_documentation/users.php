@@ -61,7 +61,27 @@
                 <div id="response-get-section-1-container" class="response" style="display:none;">
                     <pre>
                         <div class="response-data-container">
-                            <!-- -->
+{
+    "status": 200,
+    "message": "success",
+    "result": [
+        {
+            "id": 3,
+            "username": "developer",
+            "email": "developer@hrswift.com"
+        },
+        {
+            "id": 2,
+            "username": "user",
+            "email": "user@hrswift.com"
+        },
+        {
+            "id": 1,
+            "username": "admin",
+            "email": "admin@hrswift.com"
+        }
+    ]
+}
                         </div>
                     </pre>
                 </div>
@@ -96,7 +116,22 @@
                 <div id="response-get-section-2-core-container" class="response" style="display:none;">
                 <pre>
                   <div class="response-data-container">
-                        <!-- -->
+{
+    "status": 200,
+    "message": "success",
+    "result": [
+        {
+            "id": 1,
+            "first_name": "Administrator",
+            "middle_name": "Administrator",
+            "last_name": "Administrator",
+            "nationality": "Filipino",
+            "birthdate": "2015-04-25",
+            "marital_status": Single,
+            "sex": Male
+        }
+    ]
+}
                   </div>
                 </pre>
                 </div>
@@ -131,7 +166,24 @@
                 <div id="response-section-3-3g-container" class="response" style="display:none;">
                 <pre>
                     <div class="response-data-container">
-
+{
+    "status": 200,
+    "message": "success",
+    "result": [
+        {
+            "id": 1,
+            "address": "Eastwood",
+            "municipality": "Libis",
+            "city": "Quezon City",
+            "zip": 1110,
+            "country": Philippines,
+            "home_telephone": "9100000",
+            "work_telephone": "9100000",
+            "mobile": "09991231234",
+            "personal_email": "admin@gmail.com"
+        }
+    ]
+}
                     </div>
                 </pre>
                 </div>
