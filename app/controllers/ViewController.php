@@ -32,6 +32,22 @@ class ViewController extends \BaseController {
 	    return View::make('my_information/index');
 	}
 
+	//API Documentation Views
+	public function api_introduction() 
+	{
+	    return View::make('api_documentation/introduction');
+	}
+
+	public function api_authentication() 
+	{
+	    return View::make('api_documentation/authentication');
+	}
+
+	public function api_users() 
+	{
+	    return View::make('api_documentation/users');
+	}
+
 }
 
 

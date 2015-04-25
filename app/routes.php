@@ -12,6 +12,13 @@
 */
 
 //FRONT END ROUTES
+//API documentation route
+Route::group(array('prefix' => 'api_documentation'), function()
+{
+	Route::get('/', array('as' => 'api_introduction', 'uses' => 'ViewController@api_introduction'));
+	Route::get('/authentication', array('as' => 'api_authentication', 'uses' => 'ViewController@api_authentication'));
+	Route::get('/users', array('as' => 'api_users', 'uses' => 'ViewController@api_users'));
+});
 
 //Set login route
 Route::get('login', array('as' => 'login', 'uses' => 'ViewController@login'));
