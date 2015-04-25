@@ -1,6 +1,6 @@
 <?php
 
-class UsersController extends \BaseController {
+class ApiUsersController extends BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -10,7 +10,10 @@ class UsersController extends \BaseController {
 	 */
 	public function index()
 	{
-
+		$data = User::getAll();
+		if($data) {
+			return Response::json(array('status' => 200, 'message' => 'success', 'result' => $data), 200);
+		}
 	}
 
 	/**
@@ -44,7 +47,10 @@ class UsersController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		$data = User::getSingle($id);
+		if($data) {
+			return Response::json(array('status' => 200, 'message' => 'success', 'result' => $data), 200);
+		}
 	}
 
 	/**

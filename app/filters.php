@@ -56,15 +56,33 @@ Route::filter('auth.basic', function()
 
 Route::filter('auth.token', function($route, $request)
 {
-    $token = md5($request->header('Authorization'));
+    $token = base64_encode('admin:hrswiftadmin123');
+    //$token = $request->header('Authorization');
 
-    $user = User::authenticateUser($token);
+    if($token) {
+	    $data = base64_decode($token);
+	    $userdata = explode(':',$data);
 
-    if(!$token || !$user) {
-        $response = Response::json(array('status' => 401, 'message' => 'Unauthorized'), 401);
+		$userdata = array(
+	        'username' => $userdata[0],
+	        'password' => $userdata[1]
+	    );
+
+	    // attempt to do the login
+	    if($attempt = Auth::attempt($userdata)) {
+	        //
+	    } else {
+	        // validation not successful, send back to form 
+	    	$response = Response::json(array('status' => 401, 'message' => 'Unauthorized'), 401);
+	        $response->header('Content-Type', 'application/json');
+	    	return $response;
+	    }
+	}
+	else {
+		$response = Response::json(array('status' => 401, 'message' => 'Unauthorized'), 401);
         $response->header('Content-Type', 'application/json');
     	return $response;
-    }
+	}
 });
 
 /*

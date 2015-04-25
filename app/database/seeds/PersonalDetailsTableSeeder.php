@@ -1,20 +1,51 @@
 <?php
 
-// Composer: "fzaninotto/faker": "v1.3.0"
-use Faker\Factory as Faker;
-
 class PersonalDetailsTableSeeder extends Seeder {
 
+	/**
+	 * Run the database seeds.
+	 *
+	 * @return void
+	 */
 	public function run()
 	{
-		$faker = Faker::create();
+		DB::table('personal_details')->truncate();
 
-		foreach(range(1, 10) as $index)
-		{
-			PersonalDetails::create([
+		PersonalDetail::create(array(
+	        'user_id' => 1,
+	        'profile_picture' => storage_path().'/users/profile_picture.png',
+	        'first_name' => 'Administrator',
+	        'middle_name' => 'Administrator',
+	        'last_name' => 'Administrator',
+	        'nationality' => 'Filipino',
+	        'birthdate' => date('Y-m-d'),
+	        'marital_status' => 5,
+	        'sex' => 3,
+	    ));
 
-			]);
-		}
+	   PersonalDetail::create(array(
+	        'user_id' => 2,
+	        'profile_picture' => storage_path().'/users/profile_picture.png',
+	        'first_name' => 'User',
+	        'middle_name' => 'User',
+	        'last_name' => 'User',
+	        'nationality' => 'Filipino',
+	        'birthdate' => date('Y-m-d'),
+	        'marital_status' => 5,
+	        'sex' => 3,
+	    ));
+
+	    PersonalDetail::create(array(
+	        'user_id' => 3,
+	        'profile_picture' => storage_path().'/users/profile_picture.png',
+	        'first_name' => 'Developer',
+	        'middle_name' => 'Developer',
+	        'last_name' => 'Developer',
+	        'nationality' => 'Filipino',
+	        'birthdate' => date('Y-m-d'),
+	        'marital_status' => 5,
+	        'sex' => 3,
+	    ));
 	}
 
 }

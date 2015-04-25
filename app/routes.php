@@ -21,7 +21,7 @@ Route::get('logout', array('as' => 'logout', 'uses' => 'SessionController@destro
 //Set home route
  Route::get('/', array('as' => 'home', function()
 {
-    if (!Auth::check()) {
+    if(!Auth::check()) {
 		return Redirect::guest('login');
 	}
 	else {
@@ -54,12 +54,8 @@ Route::group(array('before' => 'auth'), function()
 });
 
 //API ROUTES
-Route::group(array('before' => 'auth.token', 'prefix' => 'api/v1'), function () {
-	
-	/* For users table */
-	Route::group(array('prefix' => 'user'), function () {
-		Route::get('/', 'UsersController@getAll');
-		Route::get('/{id?}', 'UsersController@getSingle');
-	});
-	/* /For users table */
+Route::group(array('before'=>'auth.token', 'prefix' => 'api/v1'), function () {
+	Route::resource('user', 'ApiUsersController');
+	Route::resource('user.personal_details', 'ApiPersonalDetailsController');
+	Route::resource('user.contact_details', 'ApiContactDetailsController');
 });

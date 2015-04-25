@@ -32,40 +32,38 @@ class SessionController extends \BaseController {
 	 */
 	public function store()
 	{
-		// validate the info, create rules for the inputs
 		$rules = array(
-		    'username'    => 'required', // make sure the username is an actual username
-		    'password' => 'required|alphaNum|min:3' // password can only be alphanumeric and has to be greater than 3 characters
+		    'username' => 'required',
+		    'password' => 'required|alphaNum|min:3'
 		);
 
-		// run the validation rules on the inputs from the form
 		$validator = Validator::make(Input::all(), $rules);
 
 		// if the validator fails, redirect back to the form
 		if ($validator->fails()) {
-		    return Redirect::to('login')
-		        ->withErrors($validator) // send back all errors to the login form
-		        ->withInput(Input::except('password')); // send back the input (not the password) so that we can repopulate the form
+		    return Redirect::home()
+		        ->withErrors($validator)
+		        ->withInput(Input::except('password'));
 		} else {
 		    // create our user data for the authentication
 		    $userdata = array(
-		        'username'     => Input::get('username'),
-		        'password'  => Input::get('password')
+		        'username' => Input::get('username'),
+		        'password' => Input::get('password')
 		    );
 
 		    // attempt to do the login
 		    if (Auth::attempt($userdata)) {
 		        // validation successful!
-		        return Redirect::to('/');
+		        return Redirect::home();
 		    } else {        
 		        // validation not successful, send back to form 
 		    	$mismatch = 'Login credentials mismatch.';
-            	return Redirect::to('login')
-            		->withErrors($validator) // send back all errors to the login form
-            		->withInput(Input::except('password')) // send back the input (not the password) so that we can repopulate the form
+            	return Redirect::home()
+            		->withErrors($validator)
+            		->withInput(Input::except('password'))
                     ->with('mismatch', $mismatch);
 		    }
-		}	
+		}
 	}
 
 	/**
@@ -114,7 +112,7 @@ class SessionController extends \BaseController {
 	public function destroy()
 	{
 		Auth::logout();
-    	return Redirect::route('login');
+    	return Redirect::home();
 	}
 
 }

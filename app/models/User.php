@@ -24,14 +24,22 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	protected $hidden = array('password', 'remember_token');
 
 	public static function getAll() {
-		return User::orderBy('id','desc')
-                        ->get();
+        return User::orderBy('id','desc')
+                        ->get([
+                        	'id',
+                        	'username',
+                        	'email'
+                        ]);
 	}
 
 	public static function getSingle($id) {
 		return User::where('id', '=', $id)
 						->orderBy('id','desc')
-                        ->get();
+                        ->get([
+                        	'id',
+                        	'username',
+                        	'email'
+                        ]);
 	}
 
 	public static function authenticateUser($token) {

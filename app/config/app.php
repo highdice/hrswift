@@ -137,7 +137,7 @@ return array(
 	*/
 
 	'manifest' => storage_path().'/meta',
-	'layout' => app_path().'/views/layouts/default',
+	'layout' => app_path().'/views/layouts/default',	
 
 	/*
 	|--------------------------------------------------------------------------

@@ -16,7 +16,7 @@ class CreatePersonalDetailsTable extends Migration {
 		{
 			$table->increments('id');
 			$table->integer('user_id');
-			$table->string('email');
+			$table->string('profile_picture');
 			$table->string('first_name');
 			$table->string('middle_name');
 			$table->string('last_name');

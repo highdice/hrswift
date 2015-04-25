@@ -28,7 +28,7 @@ class GroupsTableSeeder extends Seeder {
 	        ))));
 
 		Group::create(array(
-	        'name'        => 'Admin',
+	        'name'        => 'Developer',
 	        'permissions' => json_encode(array(
 	            'admin' => 1,
 	            'users' => 1,

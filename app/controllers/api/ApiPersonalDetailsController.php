@@ -1,21 +1,24 @@
 <?php
 
-class UsersController extends \BaseController {
+class ApiPersonalDetailsController extends BaseController {
 
 	/**
 	 * Display a listing of the resource.
-	 * GET /users
+	 * GET /personalinformations
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index($user_id)
 	{
-
+		$data = PersonalDetail::getAll($user_id);
+		if($data) {
+			return Response::json(array('status' => 200, 'message' => 'success', 'result' => $data), 200);
+		}
 	}
 
 	/**
 	 * Show the form for creating a new resource.
-	 * GET /users/create
+	 * GET /personalinformations/create
 	 *
 	 * @return Response
 	 */
@@ -26,7 +29,7 @@ class UsersController extends \BaseController {
 
 	/**
 	 * Store a newly created resource in storage.
-	 * POST /users
+	 * POST /personalinformations
 	 *
 	 * @return Response
 	 */
@@ -37,19 +40,19 @@ class UsersController extends \BaseController {
 
 	/**
 	 * Display the specified resource.
-	 * GET /users/{id}
+	 * GET /personalinformations/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($user_id, $personal_information_id)
 	{
 		//
 	}
 
 	/**
 	 * Show the form for editing the specified resource.
-	 * GET /users/{id}/edit
+	 * GET /personalinformations/{id}/edit
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -61,7 +64,7 @@ class UsersController extends \BaseController {
 
 	/**
 	 * Update the specified resource in storage.
-	 * PUT /users/{id}
+	 * PUT /personalinformations/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -73,7 +76,7 @@ class UsersController extends \BaseController {
 
 	/**
 	 * Remove the specified resource from storage.
-	 * DELETE /users/{id}
+	 * DELETE /personalinformations/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
