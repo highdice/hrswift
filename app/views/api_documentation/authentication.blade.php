@@ -17,13 +17,20 @@ HRSwift API Documentation
     <div id="authentication" class="col-lg-offset-2 col-lg-10 col-md-offset-2 col-md-10 col-sm-offset-2 col-sm-10 col-xs-12 section-container">
         <h3>Authentication</h3>
 
+        <br />
+        <h5>API URLs:</h5>
+        <p>STAGING: http://hrswift.com/hrswift</p>
+        <p>PRODUCTION: http://hrswift.com</p>
+        <br />
+
         <p class="section-description">
-            The HRSwift API uses basic authentication with a base 64 encoded username and password.
-            HRSwift expects the base 64 encoded login credentials to be included in all API requests to the server in a header that looks like the following:
+            To use HRSwift's API, you must authenticate first by calling 'http://<span class="pill pill-green">API URL</span>/api/v1/login'.
+            HRSwift expects a base 64 encoded login credential to be included in an http header that looks like the following:
 
             <br />
-            <p><i class="glyphicon glyphicon-info-sign"></i> <b>Important</b>: You must replace 'token' with your personal base 64 encoded login credentials. Also, please note that the username and password must be separated by a colon before encoding it to base 64.</p>
-            
+
+            <p><i class="glyphicon glyphicon-info-sign"></i> <b>Important</b>: Please note that the username and password must be separated by a colon before encoding it to base 64.</p>
+
             <p>
                 <div class="table-responsive">
                   <table class="table table-hover">
@@ -39,29 +46,64 @@ HRSwift API Documentation
                 </div>
             </p>
 
-            <h5>API URL:</h5>
-            <p>STAGING: http://hrswift.com/hrswift</p>
-            <p>PRODUCTION: http://hrswift.com</p>
+            If successful, HRSwift will return the following response:
+
+            <br /><br />
+
+            <pre>
+            {
+                "status": 200,
+                "message": "Success",
+                "result": {
+                    "user_id": 1
+                }
+            }
+            </pre>
+
+            After retrieving the user ID, it is now time to build your signature. You can do this by using HMAC SHA256 hashing. 
+            Included inside the hash will be your concatenated username and user ID. You will also have to use the API key given to you for generating the HMAC variant.
+            Please refer to the following PHP example:
+
+            <br /><br />
+
+            <h5>PHP</h5>
+            <p>You can build the signature in PHP by using hash_hmac("sha256", $username.$user_id, $apikey)</p>
+
             <br />
+
+            Lastly, please note that all API requests aside from "login" will require X-Public and X-Hash headers to be included in every API call. 
+            The X-Public header should include your user ID while the X-Hash header should include your signature. Following are few examples:
+
+            <p>
+                <div class="table-responsive">
+                  <table class="table table-hover">
+                    <thead>
+                        <th>Format</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>X-Public: [user ID]</td>
+                        </tr>
+                        <tr>
+                            <td>X-Hash: [signature]</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+            </p>
 
             <h5>SHELL</h5>
-            <p>curl -X GET -H "Authorization: token" http://<span class="pill pill-green">API URL</span>/api/v1/user</p>
-
-            <br />
-            <h5>PHP</h5>
-            <p>You can build the 'Authorization' header in PHP by doing base_64_encode($username . ':' . $password)</p>
+            <p>curl -X GET -H "X-Public: user_id" -H "X-Hash: signature" http://<span class="pill pill-green">API URL</span>/api/v1/user</p>
 
             <br />
             <h5>Javascript</h5>
-            <p>You can build the 'Authorization' header in javascript by doing btoa(username + ':' + password')</p>
-            <br />
-            <p><b>Sample Script</b></p>
             <p>
                 $.ajax({<br/>
                   &nbsp;&nbsp;url: 'http://<span class="pill pill-green">API URL</span>/api/v1/user',<br/>
                   &nbsp;&nbsp;type: 'GET',<br/>
                   &nbsp;&nbsp;beforeSend: function(xhr) {<br/>
-                    &nbsp;&nbsp;&nbsp;&nbsp;xhr.setRequestHeader('Authorization', token) <br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;xhr.setRequestHeader('X-Public', user_id) <br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;xhr.setRequestHeader('X-Hash', signature) <br/>
                   &nbsp;&nbsp;},<br/>
                   &nbsp;&nbsp;success: function(data) {<br/>
                     &nbsp;&nbsp;&nbsp;&nbsp;console.log(data);<br/>

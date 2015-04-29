@@ -35,16 +35,22 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	public static function getSingle($id) {
 		return User::where('id', '=', $id)
 						->orderBy('id','desc')
-                        ->get([
+                        ->first([
                         	'id',
                         	'username',
-                        	'email'
+                        	'email',
                         ]);
 	}
 
-	public static function authenticateUser($token) {
-		return User::where('token', $token)
-	    				->first();
+	public static function authenticateUser($id) {
+		return User::where('id', '=', $id)
+						->orderBy('id','desc')
+                        ->first([
+                        	'id',
+                        	'username',
+                        	'email',
+                        	'api_key'
+                        ]);
 	}
 
 }

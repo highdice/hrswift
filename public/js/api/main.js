@@ -1,3 +1,38 @@
+$(window).scroll(function () { 
+    var scrollValue = $(window).scrollTop();
+    var section_1 = $("#section-1").position().top - 50;
+    var section_2 = $("#section-2").position().top - 50;
+    var section_3 = $("#section-3").position().top - 50;
+    var section_4 = $("#section-4").position().top - 50;
+    var section_5 = $("#section-5").position().top - 50;
+    var section_6 = $("#section-6").position().top - 50;
+
+    if(scrollValue == 0) {
+        $(".left-sidebar-item").removeClass("active");
+        $(".section-1").addClass("active");
+    }
+    else if(scrollValue >= section_2 && scrollValue < section_3) {
+        $(".left-sidebar-item").removeClass("active");
+        $(".section-2").addClass("active");
+    }
+    else if(scrollValue >= section_3 && scrollValue < section_4) {
+        $(".left-sidebar-item").removeClass("active");
+        $(".section-3").addClass("active");
+    }
+    else if(scrollValue >= section_4 && scrollValue < section_5) {
+        $(".left-sidebar-item").removeClass("active");
+        $(".section-4").addClass("active");
+    }
+    else if(scrollValue >= section_5 && scrollValue < section_6) {
+        $(".left-sidebar-item").removeClass("active");
+        $(".section-5").addClass("active");
+    }
+    else if(scrollValue >= section_6) {
+        $(".left-sidebar-item").removeClass("active");
+        $(".section-6").addClass("active");
+    }
+});
+
 $(".section-1").click(function() {
     $("html, body").stop(true, false).animate({ scrollTop: $("#section-1").position().top + "px" }, 300);
 });

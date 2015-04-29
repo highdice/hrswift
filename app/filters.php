@@ -54,35 +54,98 @@ Route::filter('auth.basic', function()
 	return Auth::basic('username');
 });
 
-Route::filter('auth.token', function($route, $request)
+Route::filter('auth.login', function($route, $request)
 {
-    //$token = base64_encode('admin:hrswiftadmin123');
-    $token = $request->header('Authorization');
+	try {
+		/*
+	    $auth = base64_encode('admin:hrswiftadmin123');
+	    */
+	    $auth = $request->header('Authorization');
 
-    if($token) {
-	    $data = base64_decode($token);
-	    $userdata = explode(':',$data);
+	    if($auth) {
+		    $data = base64_decode($auth);
+		    $userdata = explode(':',$data);
 
-		$userdata = array(
-	        'username' => $userdata[0],
-	        'password' => $userdata[1]
-	    );
+			$userdata = array(
+		        'username' => $userdata[0],
+		        'password' => $userdata[1]
+		    );
 
-	    // attempt to do the login
-	    if($attempt = Auth::attempt($userdata)) {
-	        //
-	    } else {
-	        // validation not successful, send back to form 
-	    	$response = Response::json(array('status' => 401, 'message' => 'Unauthorized'), 401);
+		    // attempt to do the login
+		    if($attempt = Auth::attempt($userdata)) {
+		    	$result = array('user_id' => Auth::id());
+
+		    	// validation successful, return user ID
+		    	$response = Response::json(array('status' => 200, 'message' => 'Success', 'result' => $result), 200);
+		        $response->header('Content-Type', 'application/json');
+		    	return $response;
+		    } else {
+		        // validation not successful, send back to form 
+		    	$response = Response::json(array('status' => 401, 'message' => 'Unauthorized'), 401);
+		        $response->header('Content-Type', 'application/json');
+		    	return $response;
+		    }
+		}
+		else {
+			$response = Response::json(array('status' => 401, 'message' => 'Unauthorized'), 401);
 	        $response->header('Content-Type', 'application/json');
 	    	return $response;
-	    }
+		}
 	}
-	else {
-		$response = Response::json(array('status' => 401, 'message' => 'Unauthorized'), 401);
+	catch (Exception $e) {
+    	$response = Response::json(array('status' => 401, 'message' => 'Unauthorized'), 401);
         $response->header('Content-Type', 'application/json');
     	return $response;
-	}
+  	}
+});
+
+Route::filter('auth.api', function()
+{
+  /*
+  $username = 'admin';
+  $user_id = 1;
+  $api_key = '$2y$10$.TFFe6UlwOyuKYJufzpIOOf087HsNmwU28viJGsxMiHRNb5RJICA.';
+  */
+
+  try {
+  	/*
+  	$user_id = $user_id;
+  	$client_signature = hash_hmac("sha256", $username.$user_id, $api_key);
+  	*/
+	
+	$user_id = $request->header('X-Public');
+  	$client_signature = $request->header('X-Hash');
+
+    //lookup user
+    $user = User::authenticateUser($user_id);
+
+    if($user) {
+      //username
+      $username = $user->username;
+      //user api key
+      $api_key = $user->api_key;
+      //recreate signature
+      $db_signature = hash_hmac("sha256", $username.$user_id, $api_key);
+      if($db_signature === $client_signature) {
+      	//
+      }
+      else {
+          $response = Response::json(array('status' => 401, 'message' => 'Unauthorized'), 401);
+          $response->header('Content-Type', 'application/json');
+    	  return $response;
+      }
+    }
+    else {
+      	$response = Response::json(array('status' => 401, 'message' => 'Unauthorized'), 401);
+        $response->header('Content-Type', 'application/json');
+    	return $response;
+    }
+  }
+  catch (Exception $e) {
+    	$response = Response::json(array('status' => 401, 'message' => 'Unauthorized'), 401);
+        $response->header('Content-Type', 'application/json');
+    	return $response;
+  }
 });
 
 /*

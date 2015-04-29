@@ -14,11 +14,11 @@
 
 		<!-- Bootstrap 3.0: Latest compiled and minified CSS -->
 		<!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"> -->
-		<link rel="stylesheet" href="{{ asset('packages/rydurham/sentinel/css/bootstrap.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 
 		<!-- Optional theme -->
 		<!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css"> -->
-		<link rel="stylesheet" href="{{ asset('packages/rydurham/sentinel/css/bootstrap-theme.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/bootstrap-theme.min.css') }}">
 
 		<link rel="stylesheet" href="{{ asset('css/jquery-ui.css') }}">
 		<link rel="stylesheet" href="{{ asset('css/jquery-ui-slider-pips.css') }}">
@@ -454,11 +454,11 @@
 		================================================== -->
 		
 
-		<script src="{{ asset('packages/rydurham/sentinel/js/jquery-2.0.2.min.js') }}"></script>
+		<script src="{{ asset('js/jquery-2.0.2.min.js') }}"></script>
 		<script src="{{ asset('js/jquery-ui.js') }}"></script>
 		<script src="{{ asset('js/jquery-ui-slider-pips.js') }}"></script> 
-		<script src="{{ asset('packages/rydurham/sentinel/js/bootstrap.min.js') }}"></script>
-		<script src="{{ asset('packages/rydurham/sentinel/js/restfulizer.js') }}"></script> 
+		<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+		<script src="{{ asset('js/restfulizer.js') }}"></script> 
 		<script src="{{ asset('js/highcharts.js') }}"></script>
 		<script src="{{ asset('js/highcharts-dark.js') }}"></script>
 		<script src="{{ asset('js/main.js') }}"></script> 

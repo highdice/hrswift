@@ -61,7 +61,11 @@ Route::group(array('before' => 'auth'), function()
 });
 
 //API ROUTES
-Route::group(array('before'=>'auth.token', 'prefix' => 'api/v1'), function () {
+Route::group(array('before' => 'auth.login', 'prefix' => 'api/v1'), function () {
+	Route::get('login', array('as' => 'login'));
+});
+
+Route::group(array('before' => 'auth.api', 'prefix' => 'api/v1'), function () {
 	Route::resource('user', 'ApiUsersController');
 	Route::resource('user.personal_details', 'ApiPersonalDetailsController');
 	Route::resource('user.contact_details', 'ApiContactDetailsController');
