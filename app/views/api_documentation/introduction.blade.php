@@ -18,7 +18,7 @@ HRSwift API Documentation
         <h3>Introduction</h3>
 
         <p class="section-description">
-            Welcome to the HRSwift API! You can use the API to access HRSwift API endpoints, which can get various information from our database.   
+            Welcome to the HRSwift API Version 1.0! You can use the API to access HRSwift API endpoints, which can get various information from our database.   
         </p>
     </div>
 </section>

@@ -34,39 +34,39 @@ $(window).scroll(function () {
 });
 
 $(".section-1").click(function() {
-    $("html, body").stop(true, false).animate({ scrollTop: $("#section-1").position().top + "px" }, 300);
+    $("html, body").stop(true, false).animate({ scrollTop: ($("#section-1").position().top - 20) + "px" }, 300);
 });
 
 $(".section-2").click(function() {  
-    $("html, body").stop(true, false).animate({ scrollTop: $("#section-2").position().top + "px" }, 300);
+    $("html, body").stop(true, false).animate({ scrollTop: ($("#section-2").position().top - 20) + "px" }, 300);
 });
 
 $(".section-3").click(function() {  
-    $("html, body").stop(true, false).animate({ scrollTop: $("#section-3").position().top + "px" }, 300);
+    $("html, body").stop(true, false).animate({ scrollTop: ($("#section-3").position().top - 20) + "px" }, 300);
 });
 
 $(".section-4").click(function() {  
-    $("html, body").stop(true, false).animate({ scrollTop: $("#section-4").position().top + "px" }, 300);
+    $("html, body").stop(true, false).animate({ scrollTop: ($("#section-4").position().top - 20) + "px" }, 300);
 });
 
 $(".section-5").click(function() {  
-    $("html, body").stop(true, false).animate({ scrollTop: $("#section-5").position().top + "px" }, 300);
+    $("html, body").stop(true, false).animate({ scrollTop: ($("#section-5").position().top - 20) + "px" }, 300);
 });
 
 $(".section-6").click(function() {  
-    $("html, body").stop(true, false).animate({ scrollTop: $("#section-6").position().top + "px" }, 300);
+    $("html, body").stop(true, false).animate({ scrollTop: ($("#section-6").position().top - 20) + "px" }, 300);
 });
 
 $(".section-7").click(function() {  
-    $("html, body").stop(true, false).animate({ scrollTop: $("#section-7").position().top + "px" }, 300);
+    $("html, body").stop(true, false).animate({ scrollTop: ($("#section-7").position().top - 20) + "px" }, 300);
 });
 
 $(".section-8").click(function() {  
-    $("html, body").stop(true, false).animate({ scrollTop: $("#section-8").position().top + "px" }, 300);
+    $("html, body").stop(true, false).animate({ scrollTop: ($("#section-8").position().top - 20) + "px" }, 300);
 });
 
 $(".section-9").click(function() {  
-    $("html, body").stop(true, false).animate({ scrollTop: $("#section-9").position().top + "px" }, 300);
+    $("html, body").stop(true, false).animate({ scrollTop: ($("#section-9").position().top - 20) + "px" }, 300);
 });
 
 $("#request-get-section-1").click(function() {  

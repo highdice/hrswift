@@ -41,13 +41,14 @@ HRSwift API Documentation
     <div id="section-1" class="col-lg-offset-2 col-lg-7 col-md-offset-2 col-md-7 col-sm-offset-2 col-sm-7 col-xs-12 section-container">
         <h3>Users</h3>
 
-        <p class="section-description">This endpoint retrieves the user table data</p>
+        <p class="section-description">This endpoint retrieves the user table's data</p>
 
-        <h5 class="endpoint-title">Endpoints</h5>
+        <h4 class="endpoint-title">Endpoints</h4>
+        <p>REQUEST TYPE: <span class="pill">GET</span></p>
         <span>Get all users:</span>
-        <p class="endpoint-container"><span class="pill">GET</span> https://<span class="pill pill-green">API URL</span>/api/v1/user</p>
+        <p class="endpoint-container">https://<span class="pill pill-green">API URL</span>/api/v1/user</p>
         <span>Get a specific user:</span>
-        <p class="endpoint-container"><span class="pill">GET</span> https://<span class="pill pill-green">API URL</span>/api/v1/user/<span class="pill pill-green">USER ID</span></p>
+        <p class="endpoint-container">https://<span class="pill pill-green">API URL</span>/api/v1/user/<span class="pill pill-green">USER ID</span></p>
     </div>
 
     <aside class="col-lg-3 col-md-3 col-sm-3 col-xs-12 section-container-sidebar">
@@ -56,7 +57,7 @@ HRSwift API Documentation
             <div id="request-get-section-1" class="request-title">Request <i class="glyphicon glyphicon-chevron-right"></i></div>
             <div id="request-get-section-1-container" class="request" style="display:none;">
                 <div class="request-data-container" >
-                    <center>Authentication Only</center>
+                    <center>Required HTTP Headers</center>
                 </div>
             </div>
 
@@ -92,17 +93,80 @@ HRSwift API Documentation
     </aside>
 </section>
 
-<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 hidden-xs section-separator"></div>
 
 <section>
     <div id="section-2" class="col-lg-offset-2 col-lg-7 col-md-offset-2 col-md-7 col-sm-offset-2 col-sm-7 col-xs-12 section-container">
         <h3>Personal Details</h3>
 
-        <p class="section-description">This endpoint retrieves the personal details data</p>
+        <p class="section-description">This endpoint retrieves the personal details table's data</p>
 
-        <h5 class="endpoint-title">Endpoints</h5>
+        <h4 class="endpoint-title">Endpoints</h4>
+        <p>REQUEST TYPE: <span class="pill">GET</span></p>
         <span>Get personal details of a specific user:</span>
-        <p class="endpoint-container"><span class="pill">GET</span> https://<span class="pill pill-green">API URL</span>/api/v1/user/<span class="pill pill-green">USER ID</span>/personal_details</p>
+        <p class="endpoint-container">https://<span class="pill pill-green">API URL</span>/api/v1/user/<span class="pill pill-green">USER ID</span>/personal_details</p>
+        
+        <br />
+        
+        <p>REQUEST TYPE: <span class="pill">PUT</span></p>
+        <span>Update personal details of a specific user:</span>
+        <p class="endpoint-container">https://<span class="pill pill-green">API URL</span>/api/v1/user/<span class="pill pill-green">USER ID</span>/personal_details</p>
+    
+        <p>
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                    <th>Parameter</th>
+                    <th>Data Type</th>
+                    <th>Required</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>first_name</td>
+                        <td>Varchar</td>
+                        <td>YES</td>
+                        <td>First name</td>
+                    </tr>
+                    <tr>
+                        <td>middle_name</td>
+                        <td>Varchar</td>
+                        <td>NO</td>
+                        <td>Middle name</td>
+                    </tr>
+                    <tr>
+                        <td>last_name</td>
+                        <td>Varchar</td>
+                        <td>YES</td>
+                        <td>Last name</td>
+                    </tr>
+                    <tr>
+                        <td>nationality</td>
+                        <td>Varchar</td>
+                        <td>YES</td>
+                        <td>Nationality</td>
+                    </tr>
+                    <tr>
+                        <td>birthdate</td>
+                        <td>Date</td>
+                        <td>YES</td>
+                        <td>Birthdate: [Y-m-d] {{ date('Y-m-d'); }}</td>
+                    </tr>
+                    <tr>
+                        <td>marital_status</td>
+                        <td>Integer</td>
+                        <td>YES</td>
+                        <td>Marital status: [5] Single, [6] Married, [7] Widowed</td>
+                    </tr>
+                    <tr>
+                        <td>sex</td>
+                        <td>Integer</td>
+                        <td>YES</td>
+                        <td>Sex: [3] Male, [4] Female</td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+        </p>
     </div>
 
     <aside class="col-lg-3 col-md-3 col-sm-3 col-xs-12 section-container-sidebar">
@@ -111,7 +175,7 @@ HRSwift API Documentation
             <div id="request-get-section-2" class="request-title">Request <i class="glyphicon glyphicon-chevron-right"></i></div>
             <div id="request-get-section-2-container" class="request" style="display:none;">
                 <div class="request-data-container">
-                    <center>Authentication Only</center>
+                    <center>Required HTTP Headers</center>
                 </div>
             </div>
 
@@ -142,17 +206,93 @@ HRSwift API Documentation
     </aside>
 </section>
 
-<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 hidden-xs section-separator"></div>
+
 
 <section>
     <div id="section-3" class="col-lg-offset-2 col-lg-7 col-md-offset-2 col-md-7 col-sm-offset-2 col-sm-7 col-xs-12 section-container">
         <h3>Contact Details</h3>
 
-        <p class="section-description">This endpoint retrieves the contact details data</p>
+        <p class="section-description">This endpoint retrieves the contact details table's data</p>
 
-        <h5 class="endpoint-title">Endpoint</h5>
+        <h4 class="endpoint-title">Endpoints</h4>
+        <p>REQUEST TYPE: <span class="pill">GET</span></p>
         <span>Get personal details of a specific user:</span>
-        <p class="endpoint-container"><span class="pill">GET</span> https://<span class="pill pill-green">API URL</span>/api/v1/user/<span class="pill pill-green">USER ID</span>/contact_details</p>
+        <p class="endpoint-container">https://<span class="pill pill-green">API URL</span>/api/v1/user/<span class="pill pill-green">USER ID</span>/contact_details</p>
+        
+        <br />
+
+        <p>REQUEST TYPE: <span class="pill">PUT</span></p>
+        <span>Update contact details of a specific user:</span>
+        <p class="endpoint-container">https://<span class="pill pill-green">API URL</span>/api/v1/user/<span class="pill pill-green">USER ID</span>/contact_details</p>
+    
+        <p>
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                    <th>Parameter</th>
+                    <th>Data Type</th>
+                    <th>Required</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>address</td>
+                        <td>Varchar</td>
+                        <td>YES</td>
+                        <td>Address</td>
+                    </tr>
+                    <tr>
+                        <td>municipality</td>
+                        <td>Varchar</td>
+                        <td>YES</td>
+                        <td>Municipality</td>
+                    </tr>
+                    <tr>
+                        <td>city</td>
+                        <td>Varchar</td>
+                        <td>YES</td>
+                        <td>City</td>
+                    </tr>
+                    <tr>
+                        <td>zip</td>
+                        <td>Integer</td>
+                        <td>YES</td>
+                        <td>ZIP code</td>
+                    </tr>
+                    <tr>
+                        <td>country</td>
+                        <td>Integer</td>
+                        <td>YES</td>
+                        <td>Country: [153] Philippines</td>
+                    </tr>
+                    <tr>
+                        <td>home_telephone</td>
+                        <td>Varchar</td>
+                        <td>NO</td>
+                        <td>Home telephone number</td>
+                    </tr>
+                    <tr>
+                        <td>work_telephone</td>
+                        <td>Varchar</td>
+                        <td>NO</td>
+                        <td>Work telephone number</td>
+                    </tr>
+                    <tr>
+                        <td>mobile</td>
+                        <td>Varchar</td>
+                        <td>NO</td>
+                        <td>Mobile number</td>
+                    </tr>
+                    <tr>
+                        <td>personal_email</td>
+                        <td>Varchar</td>
+                        <td>NO</td>
+                        <td>Personal email address</td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+        </p>
     </div>
 
     <aside class="col-lg-3 col-md-3 col-sm-3 col-xs-12 section-container-sidebar">
@@ -161,7 +301,7 @@ HRSwift API Documentation
             <div id="request-section-3" class="request-title">Request <i class="glyphicon glyphicon-chevron-right"></i></div>
             <div id="request-section-3-container" class="request" style="display:none;">
                 <div class="request-data-container" >
-                    <center>Authentication Only</center>
+                    <center>Required HTTP Headers</center>
                 </div>
             </div>
 
@@ -194,232 +334,37 @@ HRSwift API Documentation
     </aside>
 </section>
 
-<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 hidden-xs section-separator"></div>
 
-<section class="is-hidden">
-    <div id="section-4" class="col-lg-offset-2 col-lg-7 col-md-offset-2 col-md-7 col-sm-offset-2 col-sm-7 col-xs-12 section-container">
-        <h3>HTTP Success Rate</h3>
+<section>
+    <div id="section-4" class="col-lg-offset-2 col-lg-7 col-md-offset-2 col-md-7 col-sm-offset-2 col-sm-7 col-xs-12 section-container" style="height: 500px;">
 
-        <p class="section-description">This endpoint retrieves the http success rate data</p>
-
-        <h5 class="endpoint-title">Endpoints</h5>
-        <p><i class="glyphicon glyphicon-info-sign"></i> default route: 3g</p>
-        <p class="endpoint-container"><span class="pill">GET</span> https://<span class="pill pill-green">API URL</span>/api/v1/mobile_data/http_success_rate/<span class="pill pill-green">3g</span></p>
-        <p class="endpoint-container"><span class="pill">GET</span> https://<span class="pill pill-green">API URL</span>/api/v1/mobile_data/http_success_rate/<span class="pill pill-green">lte</span></p>
     </div>
 
     <aside class="col-lg-3 col-md-3 col-sm-3 col-xs-12 section-container-sidebar">
-        <div class="hidden-xs separator"></div>
-        <div class="sample-sidebar">
-            <div id="request-section-4" class="request-title">Request <i class="glyphicon glyphicon-chevron-right"></i></div>
-            <div id="request-section-4-container" class="request" style="display:none;">
-                <div class="request-data-container">
-                    <center>Authentication Only</center>
-                </div>
-            </div>
-
-            <div id="response-section-4-3g" class="response-title">Response [3G] <i class="glyphicon glyphicon-chevron-right"></i></div>
-            <div id="response-section-4-3g-container" class="response" style="display:none;">
-            <pre>    
-                <div class="response-data-container">
-{
-"status": 200,
-"result": [
-    {
-        "prepaid_http_success_rate": 43.8,
-        "prepaid_dns_success_rate": 96.3,
-        "postpaid_http_success_rate": 87.1,
-        "postpaid_dns_success_rate": 95.2
-    }
-]
-}
-                </div>
-            </pre>
-            </div>
-
-            <div id="response-section-4-lte" class="response-title">Response [LTE] <i class="glyphicon glyphicon-chevron-right"></i></div>
-            <div id="response-section-4-lte-container" class="response" style="display:none;">
-            <pre>    
-                <div class="response-data-container">
-{
-"status": 200,
-"result": [
-    {
-        "prepaid_http_success_rate": 75.1,
-        "prepaid_dns_success_rate": 94.2,
-        "postpaid_http_success_rate": 87,
-        "postpaid_dns_success_rate": 95.6
-    }
-]
-}
-                </div>
-            </pre>
-            </div>
-        </div>
+        
     </aside>
 </section>
 
-<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 hidden-xs section-separator"></div>
 
 <section class="is-hidden">
     <div id="section-5" class="col-lg-offset-2 col-lg-7 col-md-offset-2 col-md-7 col-sm-offset-2 col-sm-7 col-xs-12 section-container">
-        <h3>Throughput</h3>
 
-        <p class="section-description">This endpoint retrieves the throughput data</p>
-
-        <h5 class="endpoint-title">Endpoints</h5>
-        <p><i class="glyphicon glyphicon-info-sign"></i> default route: 3g</p>
-        <p class="endpoint-container"><span class="pill">GET</span> https://<span class="pill pill-green">API URL</span>/api/v1/mobile_data/throughput/<span class="pill pill-green">3g</span></p>
-        <p class="endpoint-container"><span class="pill">GET</span> https://<span class="pill pill-green">API URL</span>/api/v1/mobile_data/throughput/<span class="pill pill-green">lte</span></p>
     </div>
 
     <aside class="col-lg-3 col-md-3 col-sm-3 col-xs-12 section-container-sidebar">
-        <div class="hidden-xs separator"></div>
-        <div class="sample-sidebar">
-            <div id="request-section-5" class="request-title">Request <i class="glyphicon glyphicon-chevron-right"></i></div>
-            <div id="request-section-5-container" class="request" style="display:none;">
-                <div class="request-data-container">
-                    <center>Authentication Only</center>
-                </div>
-            </div>
-
-            <div id="response-section-5-3g" class="response-title">Response [3G] <i class="glyphicon glyphicon-chevron-right"></i></div>
-            <div id="response-section-5-3g-container" class="response" style="display:none;">
-            <pre>    
-                <div class="response-data-container">
-{
-"status": 200,
-"result": [
-    {
-        "upload": 259,
-        "download": 1.1
-    }
-]
-}
-                </div>
-            </pre>
-            </div>
-
-            <div id="response-section-5-lte" class="response-title">Response [LTE] <i class="glyphicon glyphicon-chevron-right"></i></div>
-            <div id="response-section-5-lte-container" class="response" style="display:none;">
-            <pre>    
-                <div class="response-data-container">
-{
-"status": 200,
-"result": [
-    {
-        "upload": 2.9,
-        "download": 3.4
-    }
-]
-}
-                </div>
-            </pre>
-            </div>
-        </div>
+        
     </aside>
 </section>
 
-<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 hidden-xs section-separator"></div>
 
 <section class="is-hidden">
     <div id="section-6" class="col-lg-offset-2 col-lg-7 col-md-offset-2 col-md-7 col-sm-offset-2 col-sm-7 col-xs-12 section-container">
-        <h3>Top 5 URLs</h3>
-
-        <p class="section-description">This endpoint retrieves the data for the top 5 URLs</p>
-
-        <h5 class="endpoint-title">Endpoints</h5>
-        <p><i class="glyphicon glyphicon-info-sign"></i> default route: 3g</p>
-        <p class="endpoint-container"><span class="pill">GET</span> https://<span class="pill pill-green">API URL</span>/api/v1/mobile_data/top_5_urls/<span class="pill pill-green">3g</span></p>
-        <p class="endpoint-container"><span class="pill">GET</span> https://<span class="pill pill-green">API URL</span>/api/v1/mobile_data/top_5_urls/<span class="pill pill-green">lte</span></p>
+        
     </div>
 
     <aside class="col-lg-3 col-md-3 col-sm-3 col-xs-12 section-container-sidebar">
-        <div class="hidden-xs separator"></div>
-        <div class="sample-sidebar">
-            <div id="request-section-6" class="request-title">Request <i class="glyphicon glyphicon-chevron-right"></i></div>
-            <div id="request-section-6-container" class="request" style="display:none;">
-                <div class="request-data-container">
-                    <center>Authentication Only</center>
-                </div>
-            </div>
-
-            <div id="response-section-6-3g" class="response-title">Response [3G] <i class="glyphicon glyphicon-chevron-right"></i></div>
-            <div id="response-section-6-3g-container" class="response" style="display:none;">
-            <pre>    
-                <div class="response-data-container">
-{
-"status": 200,
-"result": [
-    {
-        "domain": "FACEBOOK",
-        "seconds": 15.35
-    },
-    {
-        "domain": "GOOGLE",
-        "seconds": 10.81
-    },
-    {
-        "domain": "MEDIAN",
-        "seconds": 14.22
-    },
-    {
-        "domain": "TWITTER",
-        "seconds": 14.63
-    },
-    {
-        "domain": "YAHOO",
-        "seconds": 22.55
-    },
-    {
-        "domain": "YOUTUBE",
-        "seconds": 15.69
-    }
-]
-}
-                </div>
-            </pre>
-            </div>
-
-            <div id="response-section-6-lte" class="response-title">Response [LTE] <i class="glyphicon glyphicon-chevron-right"></i></div>
-            <div id="response-section-6-lte-container" class="response" style="display:none;">
-            <pre>    
-                <div class="response-data-container">
-{
-"status": 200,
-"result": [
-    {
-        "domain": "FACEBOOK",
-        "seconds": 13
-    },
-    {
-        "domain": "GOOGLE",
-        "seconds": 10.22
-    },
-    {
-        "domain": "MEDIAN",
-        "seconds": 8.6
-    },
-    {
-        "domain": "TWITTER",
-        "seconds": 11.03
-    },
-    {
-        "domain": "YAHOO",
-        "seconds": 16.2
-    },
-    {
-        "domain": "YOUTUBE",
-        "seconds": 14.25
-    }
-]
-}
-                </div>
-            </pre>
-            </div>
-        </div>
+        
     </aside>
 </section>
 
-<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 hidden-xs" style="height: 500px;"></div>
 @stop
