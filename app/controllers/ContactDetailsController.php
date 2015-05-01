@@ -4,7 +4,7 @@ class ContactDetailsController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
-	 * GET /contactdetails
+	 * GET /contact_details
 	 *
 	 * @return Response
 	 */
@@ -15,7 +15,7 @@ class ContactDetailsController extends \BaseController {
 
 	/**
 	 * Show the form for creating a new resource.
-	 * GET /contactdetails/create
+	 * GET /contact_details/create
 	 *
 	 * @return Response
 	 */
@@ -26,7 +26,7 @@ class ContactDetailsController extends \BaseController {
 
 	/**
 	 * Store a newly created resource in storage.
-	 * POST /contactdetails
+	 * POST /contact_details
 	 *
 	 * @return Response
 	 */
@@ -37,7 +37,7 @@ class ContactDetailsController extends \BaseController {
 
 	/**
 	 * Display the specified resource.
-	 * GET /contactdetails/{id}
+	 * GET /contact_details/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -49,7 +49,7 @@ class ContactDetailsController extends \BaseController {
 
 	/**
 	 * Show the form for editing the specified resource.
-	 * GET /contactdetails/{id}/edit
+	 * GET /contact_details/{id}/edit
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -61,7 +61,7 @@ class ContactDetailsController extends \BaseController {
 
 	/**
 	 * Update the specified resource in storage.
-	 * PUT /contactdetails/{id}
+	 * PUT /contact_details/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -73,7 +73,7 @@ class ContactDetailsController extends \BaseController {
 
 	/**
 	 * Remove the specified resource from storage.
-	 * DELETE /contactdetails/{id}
+	 * DELETE /contact_details/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response

@@ -112,9 +112,9 @@ Route::filter('auth.api', function()
   	$user_id = $user_id;
   	$client_signature = hash_hmac("sha256", $username.$user_id, $api_key);
   	*/
-	
-	$user_id = $request->header('X-Public');
-  	$client_signature = $request->header('X-Hash');
+
+	$user_id = Request::header('X-Public');
+  	$client_signature = Request::header('X-Hash');
 
     //lookup user
     $user = User::authenticateUser($user_id);

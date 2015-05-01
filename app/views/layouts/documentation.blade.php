@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	
     <!-- STYLESHEETS -->
+    <link rel="shortcut icon" href="{{ asset('images/logo_mini.ico') }}" />
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <!-- End Bootstrap -->

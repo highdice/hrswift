@@ -4,7 +4,7 @@ class ApiPersonalDetailsController extends BaseController {
 
 	/**
 	 * Display a listing of the resource.
-	 * GET /personalinformations
+	 * GET /personal_details
 	 *
 	 * @return Response
 	 */
@@ -18,7 +18,7 @@ class ApiPersonalDetailsController extends BaseController {
 
 	/**
 	 * Show the form for creating a new resource.
-	 * GET /personalinformations/create
+	 * GET /personal_details/create
 	 *
 	 * @return Response
 	 */
@@ -29,7 +29,7 @@ class ApiPersonalDetailsController extends BaseController {
 
 	/**
 	 * Store a newly created resource in storage.
-	 * POST /personalinformations
+	 * POST /personal_details
 	 *
 	 * @return Response
 	 */
@@ -40,7 +40,7 @@ class ApiPersonalDetailsController extends BaseController {
 
 	/**
 	 * Display the specified resource.
-	 * GET /personalinformations/{id}
+	 * GET /personal_details/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -52,7 +52,7 @@ class ApiPersonalDetailsController extends BaseController {
 
 	/**
 	 * Show the form for editing the specified resource.
-	 * GET /personalinformations/{id}/edit
+	 * GET /personal_details/{id}/edit
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -64,19 +64,39 @@ class ApiPersonalDetailsController extends BaseController {
 
 	/**
 	 * Update the specified resource in storage.
-	 * PUT /personalinformations/{id}
+	 * PUT /personal_details/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($user_id, $personal_details_id)
 	{
-		//
+		$data = Input::all();
+
+		$rules = array(
+		    'first_name' => 'required',
+		    'last_name' => 'required',
+		    'nationality' => 'required',
+		    'birthdate' => 'required|date_format:Y-m-d',
+		    'marital_status' => 'required|numeric',
+		    'sex' => 'required|numeric'
+		);
+
+		$validator = Validator::make($data, $rules);
+
+		// if the validator fails, redirect back to the form
+		if ($validator->fails()) {
+		    $response = Response::json(array('status' => 400, 'message' => 'Bad Request', 'error' => $validator->messages()), 401);
+        	$response->header('Content-Type', 'application/json');
+    		return $response;
+		} else {
+		    
+		}
 	}
 
 	/**
 	 * Remove the specified resource from storage.
-	 * DELETE /personalinformations/{id}
+	 * DELETE /personal_details/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response

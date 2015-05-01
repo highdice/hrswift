@@ -1,10 +1,10 @@
 <?php
 
-class PersonalInformationController extends \BaseController {
+class PersonalDetailsController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
-	 * GET /personalinformations
+	 * GET /personal_details
 	 *
 	 * @return Response
 	 */
@@ -15,7 +15,7 @@ class PersonalInformationController extends \BaseController {
 
 	/**
 	 * Show the form for creating a new resource.
-	 * GET /personalinformations/create
+	 * GET /personal_details/create
 	 *
 	 * @return Response
 	 */
@@ -26,7 +26,7 @@ class PersonalInformationController extends \BaseController {
 
 	/**
 	 * Store a newly created resource in storage.
-	 * POST /personalinformations
+	 * POST /personal_details
 	 *
 	 * @return Response
 	 */
@@ -37,7 +37,7 @@ class PersonalInformationController extends \BaseController {
 
 	/**
 	 * Display the specified resource.
-	 * GET /personalinformations/{id}
+	 * GET /personal_details/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -49,7 +49,7 @@ class PersonalInformationController extends \BaseController {
 
 	/**
 	 * Show the form for editing the specified resource.
-	 * GET /personalinformations/{id}/edit
+	 * GET /personal_details/{id}/edit
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -61,7 +61,7 @@ class PersonalInformationController extends \BaseController {
 
 	/**
 	 * Update the specified resource in storage.
-	 * PUT /personalinformations/{id}
+	 * PUT /personal_details/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -73,7 +73,7 @@ class PersonalInformationController extends \BaseController {
 
 	/**
 	 * Remove the specified resource from storage.
-	 * DELETE /personalinformations/{id}
+	 * DELETE /personal_details/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
