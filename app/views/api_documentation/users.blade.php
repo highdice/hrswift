@@ -73,25 +73,15 @@ HRSwift API Documentation
                 <pre>
                     <div class="response-data-container">
 {
-"status": 200,
-"message": "success",
-"result": [
-    {
-        "id": 3,
-        "username": "developer",
-        "email": "developer@hrswift.com"
-    },
-    {
-        "id": 2,
-        "username": "user",
-        "email": "user@hrswift.com"
-    },
-    {
+    "status": 200,
+    "message": "Success",
+    "result": {
         "id": 1,
         "username": "admin",
-        "email": "admin@hrswift.com"
+        "email": "admin@hrswift.com",
+        "company": "HRSwift",
+        "address": "Eastwood City, Libis"
     }
-]
 }
                     </div>
                 </pre>
@@ -162,7 +152,7 @@ HRSwift API Documentation
                         <td>marital_status</td>
                         <td>Integer</td>
                         <td>YES</td>
-                        <td>Marital status: [5] Single, [6] Married, [7] Widowed</td>
+                        <td>Marital status: [50] Single, [51] Married, [52] Widowed, [53] Divorced</td>
                     </tr>
                     <tr>
                         <td>sex</td>
@@ -212,8 +202,8 @@ HRSwift API Documentation
             "middle_name": "Administrator",
             "last_name": "Administrator",
             "nationality": "Filipino",
-            "birthdate": "2015-05-10",
-            "marital_status": 5,
+            "birthdate": "2015-05-11",
+            "marital_status": 50,
             "sex": 3,
             "blood_type": "",
             "hobbies": ""
@@ -284,7 +274,7 @@ HRSwift API Documentation
                         <td>country</td>
                         <td>Integer</td>
                         <td>YES</td>
-                        <td>Country: [153] Philippines</td>
+                        <td>Country: [236] Philippines</td>
                     </tr>
                     <tr>
                         <td>home_telephone</td>
@@ -331,22 +321,22 @@ HRSwift API Documentation
             <pre>
                 <div class="response-data-container">
 {
-"status": 200,
-"message": "success",
-"result": [
-    {
-        "id": 1,
-        "address": "Eastwood",
-        "municipality": "Libis",
-        "city": "Quezon City",
-        "zip": 1110,
-        "country": Philippines,
-        "home_telephone": "9100000",
-        "work_telephone": "9100000",
-        "mobile": "09991231234",
-        "personal_email": "admin@gmail.com"
-    }
-]
+    "status": 200,
+    "message": "Success",
+    "result": [
+        {
+            "id": 1,
+            "address": "Eastwood",
+            "municipality": "Libis",
+            "city": "Quezon City",
+            "zip": 1110,
+            "country": 236,
+            "home_telephone": "9100000",
+            "work_telephone": "9100000",
+            "mobile": "09991231234",
+            "personal_email": "admin@gmail.com"
+        }
+    ]
 }
                 </div>
             </pre>
@@ -503,10 +493,10 @@ HRSwift API Documentation
             "probation_date": "2015-04-01",
             "permanency_date": "2015-07-01",
             "job_title": "CEO",
-            "employment_status": 15,
+            "employment_status": 60,
             "job_specification": "",
-            "work_shift": 17,
-            "department": 29,
+            "work_shift": 62,
+            "department": 74,
             "comment": "",
             "contract_path": ""
         }
@@ -552,7 +542,7 @@ HRSwift API Documentation
         {
             "id": 2,
             "name": "John Doe",
-            "relationship": 40,
+            "relationship": 85,
             "birthdate": "1955-01-01"
         }
     ]
@@ -596,9 +586,12 @@ HRSwift API Documentation
     "result": [
         {
             "id": 2,
-            "name": "John Doe",
-            "relationship": 40,
-            "birthdate": "1955-01-01"
+            "level": 13,
+            "institute": "University of the Philippines",
+            "program": "Information Technology",
+            "date_from": "2008-04-01",
+            "date_to": "2012-04-01",
+            "score": 2
         }
     ]
 }
@@ -641,9 +634,15 @@ HRSwift API Documentation
     "result": [
         {
             "id": 2,
-            "name": "John Doe",
-            "relationship": 40,
-            "birthdate": "1955-01-01"
+            "language": 27,
+            "fluency_level": 22,
+            "comments": ""
+        },
+        {
+            "id": 2,
+            "language": 45,
+            "fluency_level": 22,
+            "comments": ""
         }
     ]
 }
