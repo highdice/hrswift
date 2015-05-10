@@ -307,7 +307,8 @@ aside ul li:last-child {
 
 .section-container {
   margin-top: 35px;
-  padding: 0px 30px; }
+  padding: 0px 30px;
+  min-height: 400px; }
   .section-container .section-description {
     padding-bottom: 10px;
     border-bottom: 3px solid #d2d3d4; }

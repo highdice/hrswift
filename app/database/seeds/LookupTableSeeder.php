@@ -13,40 +13,192 @@ class LookupTableSeeder extends Seeder {
 
 		 $data = array(
             array(
-                'keyword'       => 'access_type', 
-                'description'   => 'Web',     
+                'keyword'       => 'access_type',
+                'description'   => 'Web',
             ),
             array(
-                'keyword'       => 'access_type', 
-                'description'   => 'Mobile',           
+                'keyword'       => 'access_type',
+                'description'   => 'Mobile',
             ),
             array(
-                'keyword'       => 'sex', 
-                'description'   => 'Male',            
+                'keyword'       => 'sex',
+                'description'   => 'Male',
             ), 
             array(
-                'keyword'       => 'sex', 
-                'description'   => 'Female',              
+                'keyword'       => 'sex',
+                'description'   => 'Female',
             ),
             array(
-                'keyword'       => 'marital_status', 
-                'description'   => 'Single',          
+                'keyword'       => 'marital_status',
+                'description'   => 'Single',
             ),
             array(
-                'keyword'       => 'marital_status', 
-                'description'   => 'Married',               
+                'keyword'       => 'marital_status',
+                'description'   => 'Married',
             ),
             array(
-                'keyword'       => 'marital_status', 
-                'description'   => 'Widowed',             
+                'keyword'       => 'marital_status',
+                'description'   => 'Widowed',
+            ),
+            array(
+                'keyword'       => 'marital_status',
+                'description'   => 'Divorced',
             ),
             array(
                 'keyword'       => 'activation_status', 
                 'description'   => 'Activated',           
             ),
             array(
-                'keyword'       => 'activation_status', 
-                'description'   => 'Deactivated',                
+                'keyword'       => 'activation_status',
+                'description'   => 'Deactivated', 
+            ),
+            array(
+                'keyword'       => 'employment_status',
+                'description'   => 'Worker', 
+            ),
+            array(
+                'keyword'       => 'employment_status',
+                'description'   => 'Employee', 
+            ),
+            array(
+                'keyword'       => 'employment_status',
+                'description'   => 'Self Employed', 
+            ),
+            array(
+                'keyword'       => 'employment_status',
+                'description'   => 'Contractor', 
+            ),
+            array(
+                'keyword'       => 'employment_status',
+                'description'   => 'Director', 
+            ),
+            array(
+                'keyword'       => 'employment_status',
+                'description'   => 'Office Holder', 
+            ),
+            array(
+                'keyword'       => 'work_shift',
+                'description'   => 'Day Shift', 
+            ),
+            array(
+                'keyword'       => 'work_shift',
+                'description'   => 'Evening Shift', 
+            ),
+            array(
+                'keyword'       => 'work_shift',
+                'description'   => 'Day Shift',
+            ),
+            array(
+                'keyword'       => 'work_shift',
+                'description'   => 'Graveyard Shift', 
+            ),
+            array(
+                'keyword'       => 'work_shift',
+                'description'   => 'Split Shift', 
+            ),
+            array(
+                'keyword'       => 'department',
+                'description'   => 'Information Technology', 
+            ),
+            array(
+                'keyword'       => 'department',
+                'description'   => 'Research and Development', 
+            ),
+            array(
+                'keyword'       => 'department',
+                'description'   => 'Human Resources', 
+            ),
+            array(
+                'keyword'       => 'department',
+                'description'   => 'Accounting', 
+            ),
+            array(
+                'keyword'       => 'department',
+                'description'   => 'Marketing', 
+            ),
+            array(
+                'keyword'       => 'department',
+                'description'   => 'Sales', 
+            ),
+            array(
+                'keyword'       => 'department',
+                'description'   => 'Legal', 
+            ),
+            array(
+                'keyword'       => 'department',
+                'description'   => 'Management', 
+            ),
+            array(
+                'keyword'       => 'department',
+                'description'   => 'Dispatch', 
+            ),
+            array(
+                'keyword'       => 'department',
+                'description'   => 'Facility', 
+            ),
+            array(
+                'keyword'       => 'department',
+                'description'   => 'Customer Service', 
+            ),
+            array(
+                'keyword'       => 'department',
+                'description'   => 'Medical Services', 
+            ),
+            array(
+                'keyword'       => 'department',
+                'description'   => 'Occupational Health and Safety', 
+            ),
+            array(
+                'keyword'       => 'department',
+                'description'   => 'Waste Management', 
+            ),
+            array(
+                'keyword'       => 'department',
+                'description'   => 'Finance', 
+            ),
+            array(
+                'keyword'       => 'department',
+                'description'   => 'Production', 
+            ),
+            array(
+                'keyword'       => 'department',
+                'description'   => 'Purchasing', 
+            ),
+            array(
+                'keyword'       => 'department',
+                'description'   => 'Logistics', 
+            ),
+            array(
+                'keyword'       => 'relationship',
+                'description'   => 'Father',                
+            ),
+            array(
+                'keyword'       => 'relationship', 
+                'description'   => 'Mother',
+            ),
+            array(
+                'keyword'       => 'relationship',
+                'description'   => 'Spouse',
+            ),
+            array(
+                'keyword'       => 'relationship',
+                'description'   => 'Sibling',             
+            ),
+            array(
+                'keyword'       => 'relationship',
+                'description'   => 'Grandparent',
+            ),
+            array(
+                'keyword'       => 'relationship',
+                'description'   => 'Aunt',
+            ),
+            array(
+                'keyword'       => 'relationship',
+                'description'   => 'Uncle',
+            ),
+            array(
+                'keyword'       => 'relationship',
+                'description'   => 'Nephew',
             ),
             array('keyword'=>'country', 'description'=>'Afghanistan'),
             array('keyword'=>'country', 'description'=>'Albania'),

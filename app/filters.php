@@ -76,46 +76,40 @@ Route::filter('auth.login', function($route, $request)
 		    	$result = array('user_id' => Auth::id());
 
 		    	// validation successful, return user ID
-		    	$response = Response::json(array('status' => 200, 'message' => 'Success', 'result' => $result), 200);
-		        $response->header('Content-Type', 'application/json');
-		    	return $response;
+		    	return Helpers::response(200, $result);
 		    } else {
 		        // validation not successful, send back to form 
-		    	$response = Response::json(array('status' => 401, 'message' => 'Unauthorized'), 401);
-		        $response->header('Content-Type', 'application/json');
-		    	return $response;
+		    	return Helpers::response(401);
 		    }
 		}
 		else {
-			$response = Response::json(array('status' => 401, 'message' => 'Unauthorized'), 401);
-	        $response->header('Content-Type', 'application/json');
-	    	return $response;
+			return Helpers::response(401);
 		}
 	}
 	catch (Exception $e) {
-    	$response = Response::json(array('status' => 401, 'message' => 'Unauthorized'), 401);
-        $response->header('Content-Type', 'application/json');
-    	return $response;
+    	return Helpers::response(401);
   	}
 });
 
 Route::filter('auth.api', function()
 {
+  
   /*
-  $username = 'admin';
-  $user_id = 1;
-  $api_key = '$2y$10$.TFFe6UlwOyuKYJufzpIOOf087HsNmwU28viJGsxMiHRNb5RJICA.';
+  $username = 'developer';
+  $user_id = base64_encode(3);
+  $api_key = '$2y$10$EV2xsyxUviTQJDBxRzC7lOl1oLKvNtPrm9cJMXRAGD6WzOe2qj9vm';
   */
 
   try {
+  	
   	/*
-  	$user_id = $user_id;
+  	$user_id = base64_decode($user_id);
   	$client_signature = hash_hmac("sha256", $username.$user_id, $api_key);
   	*/
 
 	$user_id = Request::header('X-Public');
   	$client_signature = Request::header('X-Hash');
-
+	
     //lookup user
     $user = User::authenticateUser($user_id);
 
@@ -127,24 +121,18 @@ Route::filter('auth.api', function()
       //recreate signature
       $db_signature = hash_hmac("sha256", $username.$user_id, $api_key);
       if($db_signature === $client_signature) {
-      	//
+      	//success
       }
       else {
-          $response = Response::json(array('status' => 401, 'message' => 'Unauthorized'), 401);
-          $response->header('Content-Type', 'application/json');
-    	  return $response;
+          return Helpers::response(401);
       }
     }
     else {
-      	$response = Response::json(array('status' => 401, 'message' => 'Unauthorized'), 401);
-        $response->header('Content-Type', 'application/json');
-    	return $response;
+      	return Helpers::response(401);
     }
   }
   catch (Exception $e) {
-    	$response = Response::json(array('status' => 401, 'message' => 'Unauthorized'), 401);
-        $response->header('Content-Type', 'application/json');
-    	return $response;
+    	return Helpers::response(401);
   }
 });
 

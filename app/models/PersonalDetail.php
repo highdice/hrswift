@@ -1,10 +1,15 @@
 <?php
 
 class PersonalDetail extends \Eloquent {
+
+	/**
+	 * The database table used by the model.
+	 *
+	 * @var string
+	 */
+	protected $table = 'personal_details';
 	
 	protected $fillable = [];
-
-	protected $table = 'personal_details';
 
 	public static function getAll($user_id) {
         return User::leftJoin('personal_details', function($join) {
@@ -19,7 +24,14 @@ class PersonalDetail extends \Eloquent {
 				        'personal_details.nationality',
 				        'personal_details.birthdate',
 				        'personal_details.marital_status',
-				        'personal_details.sex'
+				        'personal_details.sex',
+				        'personal_details.blood_type',
+				        'personal_details.hobbies'
 				    ]);
+	}
+
+	public static function updateSingle($user_id, $data) {
+		return User::where('user_id', '=', $user_id)
+            ->update($data);
 	}
 }

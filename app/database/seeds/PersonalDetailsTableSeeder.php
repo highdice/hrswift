@@ -33,6 +33,8 @@ class PersonalDetailsTableSeeder extends Seeder {
 	        'birthdate' => date('Y-m-d'),
 	        'marital_status' => 5,
 	        'sex' => 3,
+	       	'blood_type' => 'o',
+	        'hobbies' => 'playing basketball'
 	    ));
 
 	    PersonalDetail::create(array(
@@ -45,6 +47,8 @@ class PersonalDetailsTableSeeder extends Seeder {
 	        'birthdate' => date('Y-m-d'),
 	        'marital_status' => 5,
 	        'sex' => 3,
+	        'blood_type' => 'o',
+	        'hobbies' => 'playing volleyball'
 	    ));
 	}
 

@@ -1,0 +1,1 @@
+C:\xampp\htdocs\hrswift\app/views/job_details/create.blade.php

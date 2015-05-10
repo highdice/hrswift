@@ -24,10 +24,6 @@ class CreatePersonalDetailsTable extends Migration {
 			$table->date('birthdate');
 			$table->integer('marital_status');
 			$table->integer('sex');
-			$table->string('father_name');
-			$table->string('father_contact');
-			$table->string('mother_name');
-			$table->string('mother_contact');
 			$table->string('blood_type');
 			$table->text('hobbies');
 			$table->timestamps();

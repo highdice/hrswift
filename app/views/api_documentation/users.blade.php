@@ -21,17 +21,18 @@ HRSwift API Documentation
         <li class="left-sidebar-item section-3">
           Contact Details
         </li>
-        <!--
         <li class="left-sidebar-item section-4">
-          HTTP Success Rate
+          Work Experience
         </li>
         <li class="left-sidebar-item section-5">
-          Throughput
+          Skills
         </li>
         <li class="left-sidebar-item section-6">
-          Top 5 URLs
+          Job Details
         </li>
-        -->
+        <li class="left-sidebar-item section-7">
+          Dependents
+        </li>
     </ul>
 </aside>
  
@@ -54,15 +55,15 @@ HRSwift API Documentation
     <aside class="col-lg-3 col-md-3 col-sm-3 col-xs-12 section-container-sidebar">
         <div class="hidden-xs separator"></div>
         <div class="sample-sidebar">
-            <div id="request-get-section-1" class="request-title">Request <i class="glyphicon glyphicon-chevron-right"></i></div>
-            <div id="request-get-section-1-container" class="request" style="display:none;">
+            <div id="request-section-1" class="request-title">Request <i class="glyphicon glyphicon-chevron-right"></i></div>
+            <div id="request-section-1-container" class="request" style="display:none;">
                 <div class="request-data-container" >
                     <center>Required HTTP Headers</center>
                 </div>
             </div>
 
-            <div id="response-get-section-1" class="response-title">Response  <i class="glyphicon glyphicon-chevron-right"></i></div>
-            <div id="response-get-section-1-container" class="response" style="display:none;">
+            <div id="response-section-1" class="response-title">Response  <i class="glyphicon glyphicon-chevron-right"></i></div>
+            <div id="response-section-1-container" class="response" style="display:none;">
                 <pre>
                     <div class="response-data-container">
 {
@@ -163,6 +164,18 @@ HRSwift API Documentation
                         <td>YES</td>
                         <td>Sex: [3] Male, [4] Female</td>
                     </tr>
+                    <tr>
+                        <td>blood_type</td>
+                        <td>Varchar</td>
+                        <td>NO</td>
+                        <td>Blood Type</td>
+                    </tr>
+                    <tr>
+                        <td>hobbies</td>
+                        <td>Text</td>
+                        <td>NO</td>
+                        <td>Hobbies</td>
+                    </tr>
                 </tbody>
               </table>
             </div>
@@ -172,32 +185,34 @@ HRSwift API Documentation
     <aside class="col-lg-3 col-md-3 col-sm-3 col-xs-12 section-container-sidebar">
         <div class="hidden-xs separator"></div>
         <div class="sample-sidebar">
-            <div id="request-get-section-2" class="request-title">Request <i class="glyphicon glyphicon-chevron-right"></i></div>
-            <div id="request-get-section-2-container" class="request" style="display:none;">
+            <div id="request-section-2" class="request-title">Request <i class="glyphicon glyphicon-chevron-right"></i></div>
+            <div id="request-section-2-container" class="request" style="display:none;">
                 <div class="request-data-container">
                     <center>Required HTTP Headers</center>
                 </div>
             </div>
 
-            <div id="response-get-section-2-core" class="response-title">Response <i class="glyphicon glyphicon-chevron-right"></i></div>
-            <div id="response-get-section-2-core-container" class="response" style="display:none;">
+            <div id="response-section-2" class="response-title">Response <i class="glyphicon glyphicon-chevron-right"></i></div>
+            <div id="response-section-2-container" class="response" style="display:none;">
             <pre>
               <div class="response-data-container">
 {
-"status": 200,
-"message": "success",
-"result": [
-    {
-        "id": 1,
-        "first_name": "Administrator",
-        "middle_name": "Administrator",
-        "last_name": "Administrator",
-        "nationality": "Filipino",
-        "birthdate": "2015-04-25",
-        "marital_status": Single,
-        "sex": Male
-    }
-]
+    "status": 200,
+    "message": "Success",
+    "result": [
+        {
+            "id": 1,
+            "first_name": "Administrator",
+            "middle_name": "Administrator",
+            "last_name": "Administrator",
+            "nationality": "Filipino",
+            "birthdate": "2015-05-10",
+            "marital_status": 5,
+            "sex": 3,
+            "blood_type": "",
+            "hobbies": ""
+        }
+    ]
 }
               </div>
             </pre>
@@ -305,8 +320,8 @@ HRSwift API Documentation
                 </div>
             </div>
 
-            <div id="response-section-3-3g" class="response-title">Response <i class="glyphicon glyphicon-chevron-right"></i></div>
-            <div id="response-section-3-3g-container" class="response" style="display:none;">
+            <div id="response-section-3" class="response-title">Response <i class="glyphicon glyphicon-chevron-right"></i></div>
+            <div id="response-section-3-container" class="response" style="display:none;">
             <pre>
                 <div class="response-data-container">
 {
@@ -336,35 +351,255 @@ HRSwift API Documentation
 
 
 <section>
-    <div id="section-4" class="col-lg-offset-2 col-lg-7 col-md-offset-2 col-md-7 col-sm-offset-2 col-sm-7 col-xs-12 section-container" style="height: 500px;">
+    <div id="section-4" class="col-lg-offset-2 col-lg-7 col-md-offset-2 col-md-7 col-sm-offset-2 col-sm-7 col-xs-12 section-container">
+        <h3>Work Experience</h3>
 
+        <p class="section-description">This endpoint retrieves the work experience table's data</p>
+
+        <h4 class="endpoint-title">Endpoints</h4>
+        <p>REQUEST TYPE: <span class="pill">GET</span></p>
+        <span>Get work experience of a specific user:</span>
+        <p class="endpoint-container">https://<span class="pill pill-green">API URL</span>/api/v1/user/<span class="pill pill-green">USER ID</span>/work_experience</p>
     </div>
 
     <aside class="col-lg-3 col-md-3 col-sm-3 col-xs-12 section-container-sidebar">
-        
+        <div class="hidden-xs separator"></div>
+        <div class="sample-sidebar">
+            <div id="request-section-4" class="request-title">Request <i class="glyphicon glyphicon-chevron-right"></i></div>
+            <div id="request-section-4-container" class="request" style="display:none;">
+                <div class="request-data-container" >
+                    <center>Required HTTP Headers</center>
+                </div>
+            </div>
+
+            <div id="response-section-4" class="response-title">Response <i class="glyphicon glyphicon-chevron-right"></i></div>
+            <div id="response-section-4-container" class="response" style="display:none;">
+            <pre>
+                <div class="response-data-container">
+{
+    "status": 200,
+    "message": "Success",
+    "result": [
+        {
+            "id": 1,
+            "company": "hrswift",
+            "address": "Eastwood City, Libis",
+            "job_title": "Vice President",
+            "date_from": "2014-01-01",
+            "date_to": "2015-05-01",
+            "comment": ""
+        },
+        {
+            "id": 1,
+            "company": "hrswift",
+            "address": "Eastwood City, Libis",
+            "job_title": "CEO",
+            "date_from": "2015-01-01",
+            "date_to": "2015-05-10",
+            "comment": ""
+        }
+    ]
+}
+                </div>
+            </pre>
+            </div>
+        </div>
     </aside>
 </section>
 
 
-<section class="is-hidden">
+<section>
     <div id="section-5" class="col-lg-offset-2 col-lg-7 col-md-offset-2 col-md-7 col-sm-offset-2 col-sm-7 col-xs-12 section-container">
+        <h3>Skills</h3>
 
+        <p class="section-description">This endpoint retrieves the work experience table's data</p>
+
+        <h4 class="endpoint-title">Endpoints</h4>
+        <p>REQUEST TYPE: <span class="pill">GET</span></p>
+        <span>Get work experience of a specific user:</span>
+        <p class="endpoint-container">https://<span class="pill pill-green">API URL</span>/api/v1/user/<span class="pill pill-green">USER ID</span>/skills</p>
     </div>
 
     <aside class="col-lg-3 col-md-3 col-sm-3 col-xs-12 section-container-sidebar">
-        
+        <div class="hidden-xs separator"></div>
+        <div class="sample-sidebar">
+            <div id="request-section-5" class="request-title">Request <i class="glyphicon glyphicon-chevron-right"></i></div>
+            <div id="request-section-5-container" class="request" style="display:none;">
+                <div class="request-data-container" >
+                    <center>Required HTTP Headers</center>
+                </div>
+            </div>
+
+            <div id="response-section-5" class="response-title">Response <i class="glyphicon glyphicon-chevron-right"></i></div>
+            <div id="response-section-5-container" class="response" style="display:none;">
+            <pre>
+                <div class="response-data-container">
+{
+    "status": 200,
+    "message": "Success",
+    "result": [
+        {
+            "id": 1,
+            "skill": "Sales",
+            "years_experience": 5,
+            "comment": ""
+        },
+        {
+            "id": 1,
+            "skill": "Management",
+            "years_experience": 5,
+            "comment": ""
+        }
+    ]
+}
+                </div>
+            </pre>
+            </div>
+        </div>
     </aside>
 </section>
 
 
-<section class="is-hidden">
+<section>
     <div id="section-6" class="col-lg-offset-2 col-lg-7 col-md-offset-2 col-md-7 col-sm-offset-2 col-sm-7 col-xs-12 section-container">
-        
+        <h3>Job Details</h3>
+
+        <p class="section-description">This endpoint retrieves the job details table's data</p>
+
+        <h4 class="endpoint-title">Endpoints</h4>
+        <p>REQUEST TYPE: <span class="pill">GET</span></p>
+        <span>Get work experience of a specific user:</span>
+        <p class="endpoint-container">https://<span class="pill pill-green">API URL</span>/api/v1/user/<span class="pill pill-green">USER ID</span>/job_details</p>
     </div>
 
     <aside class="col-lg-3 col-md-3 col-sm-3 col-xs-12 section-container-sidebar">
-        
+        <div class="hidden-xs separator"></div>
+        <div class="sample-sidebar">
+            <div id="request-section-6" class="request-title">Request <i class="glyphicon glyphicon-chevron-right"></i></div>
+            <div id="request-section-6-container" class="request" style="display:none;">
+                <div class="request-data-container" >
+                    <center>Required HTTP Headers</center>
+                </div>
+            </div>
+
+            <div id="response-section-6" class="response-title">Response <i class="glyphicon glyphicon-chevron-right"></i></div>
+            <div id="response-section-6-container" class="response" style="display:none;">
+            <pre>
+                <div class="response-data-container">
+{
+    "status": 200,
+    "message": "Success",
+    "result": [
+        {
+            "id": 1,
+            "joined_date": "2015-01-01",
+            "contract_end_date": "0000-00-00",
+            "probation_date": "2015-04-01",
+            "permanency_date": "2015-07-01",
+            "job_title": "CEO",
+            "employment_status": 15,
+            "job_specification": "",
+            "work_shift": 17,
+            "department": 29,
+            "comment": "",
+            "contract_path": ""
+        }
+    ]
+}
+                </div>
+            </pre>
+            </div>
+        </div>
     </aside>
 </section>
 
+<section>
+    <div id="section-7" class="col-lg-offset-2 col-lg-7 col-md-offset-2 col-md-7 col-sm-offset-2 col-sm-7 col-xs-12 section-container">
+        <h3>Dependents</h3>
+
+        <p class="section-description">This endpoint retrieves the dependents table's data</p>
+
+        <h4 class="endpoint-title">Endpoints</h4>
+        <p>REQUEST TYPE: <span class="pill">GET</span></p>
+        <span>Get work experience of a specific user:</span>
+        <p class="endpoint-container">https://<span class="pill pill-green">API URL</span>/api/v1/user/<span class="pill pill-green">USER ID</span>/dependents</p>
+    </div>
+
+    <aside class="col-lg-3 col-md-3 col-sm-3 col-xs-12 section-container-sidebar">
+        <div class="hidden-xs separator"></div>
+        <div class="sample-sidebar">
+            <div id="request-section-7" class="request-title">Request <i class="glyphicon glyphicon-chevron-right"></i></div>
+            <div id="request-section-7-container" class="request" style="display:none;">
+                <div class="request-data-container" >
+                    <center>Required HTTP Headers</center>
+                </div>
+            </div>
+
+            <div id="response-section-7" class="response-title">Response <i class="glyphicon glyphicon-chevron-right"></i></div>
+            <div id="response-section-7-container" class="response" style="display:none;">
+            <pre>
+                <div class="response-data-container">
+{
+    "status": 200,
+    "message": "Success",
+    "result": [
+        {
+            "id": 2,
+            "name": "John Doe",
+            "relationship": 40,
+            "birthdate": "1955-01-01"
+        }
+    ]
+}
+                </div>
+            </pre>
+            </div>
+        </div>
+    </aside>
+</section>
+
+<section style="visibility:hidden;">
+    <div id="section-8" class="col-lg-offset-2 col-lg-7 col-md-offset-2 col-md-7 col-sm-offset-2 col-sm-7 col-xs-12 section-container">
+        <h3>Dependents</h3>
+
+        <p class="section-description">This endpoint retrieves the work experience table's data</p>
+
+        <h4 class="endpoint-title">Endpoints</h4>
+        <p>REQUEST TYPE: <span class="pill">GET</span></p>
+        <span>Get work experience of a specific user:</span>
+        <p class="endpoint-container">https://<span class="pill pill-green">API URL</span>/api/v1/user/<span class="pill pill-green">USER ID</span>/dependents</p>
+    </div>
+
+    <aside class="col-lg-3 col-md-3 col-sm-3 col-xs-12 section-container-sidebar">
+        <div class="hidden-xs separator"></div>
+        <div class="sample-sidebar">
+            <div id="request-section-8" class="request-title">Request <i class="glyphicon glyphicon-chevron-right"></i></div>
+            <div id="request-section-8-container" class="request" style="display:none;">
+                <div class="request-data-container" >
+                    <center>Required HTTP Headers</center>
+                </div>
+            </div>
+
+            <div id="response-section-8" class="response-title">Response <i class="glyphicon glyphicon-chevron-right"></i></div>
+            <div id="response-section-8-container" class="response" style="display:none;">
+            <pre>
+                <div class="response-data-container">
+{
+    "status": 200,
+    "message": "Success",
+    "result": [
+        {
+            "id": 2,
+            "name": "John Doe",
+            "relationship": 40,
+            "birthdate": "1955-01-01"
+        }
+    ]
+}
+                </div>
+            </pre>
+            </div>
+        </div>
+    </aside>
+</section>
 @stop

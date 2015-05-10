@@ -82,7 +82,7 @@ HRSwift API Documentation
                     </thead>
                     <tbody>
                         <tr>
-                            <td>X-Public: [user ID]</td>
+                            <td>X-Public: [encodeBase64 ("user ID")]</td>
                         </tr>
                         <tr>
                             <td>X-Hash: [signature]</td>

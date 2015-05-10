@@ -1,24 +1,21 @@
 <?php
 
-class ApiUsersController extends BaseController {
+class WorkExperienceController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
-	 * GET /users
+	 * GET /workexperiences
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-		$data = User::getAll();
-		if($data) {
-			return Helpers::response(200, $data);
-		}
+		//
 	}
 
 	/**
 	 * Show the form for creating a new resource.
-	 * GET /users/create
+	 * GET /workexperiences/create
 	 *
 	 * @return Response
 	 */
@@ -29,7 +26,7 @@ class ApiUsersController extends BaseController {
 
 	/**
 	 * Store a newly created resource in storage.
-	 * POST /users
+	 * POST /workexperiences
 	 *
 	 * @return Response
 	 */
@@ -40,22 +37,19 @@ class ApiUsersController extends BaseController {
 
 	/**
 	 * Display the specified resource.
-	 * GET /users/{id}
+	 * GET /workexperiences/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
 	public function show($id)
 	{
-		$data = User::getSingle($id);
-		if($data) {
-			return Helpers::response(200, $data);
-		}
+		//
 	}
 
 	/**
 	 * Show the form for editing the specified resource.
-	 * GET /users/{id}/edit
+	 * GET /workexperiences/{id}/edit
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -67,7 +61,7 @@ class ApiUsersController extends BaseController {
 
 	/**
 	 * Update the specified resource in storage.
-	 * PUT /users/{id}
+	 * PUT /workexperiences/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -79,7 +73,7 @@ class ApiUsersController extends BaseController {
 
 	/**
 	 * Remove the specified resource from storage.
-	 * DELETE /users/{id}
+	 * DELETE /workexperiences/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response

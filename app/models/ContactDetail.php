@@ -1,9 +1,15 @@
 <?php
 
 class ContactDetail extends \Eloquent {
-	protected $fillable = [];
 
+	/**
+	 * The database table used by the model.
+	 *
+	 * @var string
+	 */
 	protected $table = 'contact_details';
+
+	protected $fillable = [];
 
 	public static function getAll($user_id) {
         return User::leftJoin('contact_details', function($join) {
@@ -22,5 +28,10 @@ class ContactDetail extends \Eloquent {
 				        'contact_details.mobile',
 				        'contact_details.personal_email'
 				    ]);
+	}
+
+	public static function updateSingle($user_id, $data) {
+		return User::where('user_id', '=', $user_id)
+            ->update($data);
 	}
 }

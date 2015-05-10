@@ -17,9 +17,10 @@ class CreateWorkExperienceTable extends Migration {
 			$table->increments('id');
 			$table->integer('user_id');
 			$table->string('company');
+			$table->text('address');
 			$table->string('job_title');
-			$table->dateTime('date_from');
-			$table->dateTime('date_to');
+			$table->date('date_from');
+			$table->date('date_to');
 			$table->text('comment');
 			$table->timestamps();
 		});

@@ -1,16 +1,16 @@
 <?php
 
-class ApiContactDetailsController extends \BaseController {
+class ApiSkillsController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
-	 * GET /contactdetails
+	 * GET /skills
 	 *
 	 * @return Response
 	 */
 	public function index($user_id)
 	{
-		$data = ContactDetail::getAll($user_id);
+		$data = Skill::getAll($user_id);
 		if($data) {
 			return Helpers::response(200, $data);
 		}
@@ -18,7 +18,7 @@ class ApiContactDetailsController extends \BaseController {
 
 	/**
 	 * Show the form for creating a new resource.
-	 * GET /contactdetails/create
+	 * GET /skills/create
 	 *
 	 * @return Response
 	 */
@@ -29,7 +29,7 @@ class ApiContactDetailsController extends \BaseController {
 
 	/**
 	 * Store a newly created resource in storage.
-	 * POST /contactdetails
+	 * POST /skills
 	 *
 	 * @return Response
 	 */
@@ -40,7 +40,7 @@ class ApiContactDetailsController extends \BaseController {
 
 	/**
 	 * Display the specified resource.
-	 * GET /contactdetails/{id}
+	 * GET /skills/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -52,7 +52,7 @@ class ApiContactDetailsController extends \BaseController {
 
 	/**
 	 * Show the form for editing the specified resource.
-	 * GET /contactdetails/{id}/edit
+	 * GET /skills/{id}/edit
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -64,37 +64,19 @@ class ApiContactDetailsController extends \BaseController {
 
 	/**
 	 * Update the specified resource in storage.
-	 * PUT /contactdetails/{id}
+	 * PUT /skills/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($user_id, $contact_details_id)
+	public function update($id)
 	{
-		$data = Input::all();
-
-		$rules = array(
-		    'address' => 'required',
-		    'municipality' => 'required',
-		    'city' => 'required',
-		    'zip' => 'required|numeric',
-		    'country' => 'required|numeric',
-		    'personal_email' => 'email'
-		);
-
-		$validator = Validator::make($data, $rules);
-
-		// if the validator fails, redirect back to the form
-		if ($validator->fails()) {
-		    return Helpers::response(400, '', $validator->messages());
-		} else {
-		    return Helpers::response(200);
-		}
+		//
 	}
 
 	/**
 	 * Remove the specified resource from storage.
-	 * DELETE /contactdetails/{id}
+	 * DELETE /skills/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response

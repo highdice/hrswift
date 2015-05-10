@@ -12,7 +12,7 @@ class ApiPersonalDetailsController extends BaseController {
 	{
 		$data = PersonalDetail::getAll($user_id);
 		if($data) {
-			return Response::json(array('status' => 200, 'message' => 'success', 'result' => $data), 200);
+			return Helpers::response(200, $data);
 		}
 	}
 
@@ -69,7 +69,7 @@ class ApiPersonalDetailsController extends BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($user_id, $personal_details_id)
+	public function update($user_id, $personal_details_id = null)
 	{
 		$data = Input::all();
 
@@ -86,11 +86,9 @@ class ApiPersonalDetailsController extends BaseController {
 
 		// if the validator fails, redirect back to the form
 		if ($validator->fails()) {
-		    $response = Response::json(array('status' => 400, 'message' => 'Bad Request', 'error' => $validator->messages()), 401);
-        	$response->header('Content-Type', 'application/json');
-    		return $response;
+    		return Helpers::response(400, '', $validator->messages());
 		} else {
-		    
+		    return Helpers::response(200);
 		}
 	}
 
