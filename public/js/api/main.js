@@ -7,6 +7,9 @@ $(window).scroll(function () {
     var section_5 = $("#section-5").position().top - 50;
     var section_6 = $("#section-6").position().top - 50;
     var section_7 = $("#section-7").position().top - 50;
+    var section_8 = $("#section-8").position().top - 50;
+    var section_9 = $("#section-9").position().top - 50;
+    var section_10 = $("#section-10").position().top - 50;
 
     if(scrollValue == 0) {
         $(".left-sidebar-item").removeClass("active");
@@ -32,9 +35,21 @@ $(window).scroll(function () {
         $(".left-sidebar-item").removeClass("active");
         $(".section-6").addClass("active");
     }
-    else if(scrollValue >= section_7) {
+    else if(scrollValue >= section_7 && scrollValue < section_8) {
         $(".left-sidebar-item").removeClass("active");
         $(".section-7").addClass("active");
+    }
+    else if(scrollValue >= section_8 && scrollValue < section_9) {
+        $(".left-sidebar-item").removeClass("active");
+        $(".section-8").addClass("active");
+    }
+    else if(scrollValue >= section_9 && scrollValue < section_10) {
+        $(".left-sidebar-item").removeClass("active");
+        $(".section-9").addClass("active");
+    }
+    else if(scrollValue >= section_10) {
+        $(".left-sidebar-item").removeClass("active");
+        $(".section-10").addClass("active");
     }
 });
 
@@ -72,6 +87,10 @@ $(".section-8").click(function() {
 
 $(".section-9").click(function() {  
     $("html, body").stop(true, false).animate({ scrollTop: ($("#section-9").position().top - 20) + "px" }, 300);
+});
+
+$(".section-10").click(function() {  
+    $("html, body").stop(true, false).animate({ scrollTop: ($("#section-10").position().top - 20) + "px" }, 300);
 });
 
 $("#request-section-1").click(function() {  
@@ -136,6 +155,22 @@ $("#request-section-8").click(function() {
 
 $("#response-section-8").click(function() {  
     slideContainer("#response-section-8");
+});
+
+$("#request-section-9").click(function() {  
+    slideContainer("#request-section-9");
+});
+
+$("#response-section-9").click(function() {  
+    slideContainer("#response-section-9");
+});
+
+$("#request-section-10").click(function() {  
+    slideContainer("#request-section-10");
+});
+
+$("#response-section-10").click(function() {  
+    slideContainer("#response-section-10");
 });
 
 function slideContainer(parent){

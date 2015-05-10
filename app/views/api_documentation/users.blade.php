@@ -33,6 +33,12 @@ HRSwift API Documentation
         <li class="left-sidebar-item section-7">
           Dependents
         </li>
+        <li class="left-sidebar-item section-8">
+          Education
+        </li>
+        <li class="left-sidebar-item section-9">
+          Language
+        </li>
     </ul>
 </aside>
  
@@ -558,16 +564,16 @@ HRSwift API Documentation
     </aside>
 </section>
 
-<section style="visibility:hidden;">
+<section>
     <div id="section-8" class="col-lg-offset-2 col-lg-7 col-md-offset-2 col-md-7 col-sm-offset-2 col-sm-7 col-xs-12 section-container">
-        <h3>Dependents</h3>
+        <h3>Education</h3>
 
         <p class="section-description">This endpoint retrieves the work experience table's data</p>
 
         <h4 class="endpoint-title">Endpoints</h4>
         <p>REQUEST TYPE: <span class="pill">GET</span></p>
         <span>Get work experience of a specific user:</span>
-        <p class="endpoint-container">https://<span class="pill pill-green">API URL</span>/api/v1/user/<span class="pill pill-green">USER ID</span>/dependents</p>
+        <p class="endpoint-container">https://<span class="pill pill-green">API URL</span>/api/v1/user/<span class="pill pill-green">USER ID</span>/education</p>
     </div>
 
     <aside class="col-lg-3 col-md-3 col-sm-3 col-xs-12 section-container-sidebar">
@@ -582,6 +588,96 @@ HRSwift API Documentation
 
             <div id="response-section-8" class="response-title">Response <i class="glyphicon glyphicon-chevron-right"></i></div>
             <div id="response-section-8-container" class="response" style="display:none;">
+            <pre>
+                <div class="response-data-container">
+{
+    "status": 200,
+    "message": "Success",
+    "result": [
+        {
+            "id": 2,
+            "name": "John Doe",
+            "relationship": 40,
+            "birthdate": "1955-01-01"
+        }
+    ]
+}
+                </div>
+            </pre>
+            </div>
+        </div>
+    </aside>
+</section>
+
+<section>
+    <div id="section-9" class="col-lg-offset-2 col-lg-7 col-md-offset-2 col-md-7 col-sm-offset-2 col-sm-7 col-xs-12 section-container">
+        <h3>Language</h3>
+
+        <p class="section-description">This endpoint retrieves the work experience table's data</p>
+
+        <h4 class="endpoint-title">Endpoints</h4>
+        <p>REQUEST TYPE: <span class="pill">GET</span></p>
+        <span>Get work experience of a specific user:</span>
+        <p class="endpoint-container">https://<span class="pill pill-green">API URL</span>/api/v1/user/<span class="pill pill-green">USER ID</span>/language</p>
+    </div>
+
+    <aside class="col-lg-3 col-md-3 col-sm-3 col-xs-12 section-container-sidebar">
+        <div class="hidden-xs separator"></div>
+        <div class="sample-sidebar">
+            <div id="request-section-9" class="request-title">Request <i class="glyphicon glyphicon-chevron-right"></i></div>
+            <div id="request-section-9-container" class="request" style="display:none;">
+                <div class="request-data-container" >
+                    <center>Required HTTP Headers</center>
+                </div>
+            </div>
+
+            <div id="response-section-9" class="response-title">Response <i class="glyphicon glyphicon-chevron-right"></i></div>
+            <div id="response-section-9-container" class="response" style="display:none;">
+            <pre>
+                <div class="response-data-container">
+{
+    "status": 200,
+    "message": "Success",
+    "result": [
+        {
+            "id": 2,
+            "name": "John Doe",
+            "relationship": 40,
+            "birthdate": "1955-01-01"
+        }
+    ]
+}
+                </div>
+            </pre>
+            </div>
+        </div>
+    </aside>
+</section>
+
+<section style="visibility:hidden;">
+    <div id="section-10" class="col-lg-offset-2 col-lg-7 col-md-offset-2 col-md-7 col-sm-offset-2 col-sm-7 col-xs-12 section-container">
+        <h3>Dependents</h3>
+
+        <p class="section-description">This endpoint retrieves the work experience table's data</p>
+
+        <h4 class="endpoint-title">Endpoints</h4>
+        <p>REQUEST TYPE: <span class="pill">GET</span></p>
+        <span>Get work experience of a specific user:</span>
+        <p class="endpoint-container">https://<span class="pill pill-green">API URL</span>/api/v1/user/<span class="pill pill-green">USER ID</span>/dependents</p>
+    </div>
+
+    <aside class="col-lg-3 col-md-3 col-sm-3 col-xs-12 section-container-sidebar">
+        <div class="hidden-xs separator"></div>
+        <div class="sample-sidebar">
+            <div id="request-section-10" class="request-title">Request <i class="glyphicon glyphicon-chevron-right"></i></div>
+            <div id="request-section-10-container" class="request" style="display:none;">
+                <div class="request-data-container" >
+                    <center>Required HTTP Headers</center>
+                </div>
+            </div>
+
+            <div id="response-section-10" class="response-title">Response <i class="glyphicon glyphicon-chevron-right"></i></div>
+            <div id="response-section-10-container" class="response" style="display:none;">
             <pre>
                 <div class="response-data-container">
 {

@@ -67,12 +67,14 @@ Route::group(array('before' => 'auth.login', 'prefix' => 'api/v1'), function () 
 
 Route::group(array('before' => 'auth.api', 'prefix' => 'api/v1'), function () {
 	Route::resource('user', 'ApiUsersController');
-	Route::resource('user.personal_details', 'ApiPersonalDetailsController');
 	Route::resource('user.contact_details', 'ApiContactDetailsController');
+	Route::resource('user.dependents', 'ApiDependentsController');
+	Route::resource('user.education', 'ApiEducationController');
+	Route::resource('user.job_details', 'ApiJobDetailsController');
+	Route::resource('user.language', 'ApiLanguageController');
+	Route::resource('user.personal_details', 'ApiPersonalDetailsController');
 	Route::resource('user.skills', 'ApiSkillsController');
 	Route::resource('user.work_experience', 'ApiWorkExperienceController');
-	Route::resource('user.dependents', 'ApiDependentsController');
-	Route::resource('user.job_details', 'ApiJobDetailsController');
 });
 
 App::missing(function(){

@@ -19,7 +19,7 @@ class PersonalDetailsTableSeeder extends Seeder {
 	        'last_name' => 'Administrator',
 	        'nationality' => 'Filipino',
 	        'birthdate' => date('Y-m-d'),
-	        'marital_status' => 5,
+	        'marital_status' => 50,
 	        'sex' => 3,
 	    ));
 
@@ -31,7 +31,7 @@ class PersonalDetailsTableSeeder extends Seeder {
 	        'last_name' => 'User',
 	        'nationality' => 'Filipino',
 	        'birthdate' => date('Y-m-d'),
-	        'marital_status' => 5,
+	        'marital_status' => 50,
 	        'sex' => 3,
 	       	'blood_type' => 'o',
 	        'hobbies' => 'playing basketball'
@@ -45,7 +45,7 @@ class PersonalDetailsTableSeeder extends Seeder {
 	        'last_name' => 'Developer',
 	        'nationality' => 'Filipino',
 	        'birthdate' => date('Y-m-d'),
-	        'marital_status' => 5,
+	        'marital_status' => 50,
 	        'sex' => 3,
 	        'blood_type' => 'o',
 	        'hobbies' => 'playing volleyball'

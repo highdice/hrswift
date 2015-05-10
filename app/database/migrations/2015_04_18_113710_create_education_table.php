@@ -19,8 +19,8 @@ class CreateEducationTable extends Migration {
 			$table->integer('level');
 			$table->string('institute');
 			$table->string('program');
-			$table->dateTime('date_from');
-			$table->dateTime('date_to');
+			$table->date('date_from');
+			$table->date('date_to');
 			$table->float('score');
 			$table->timestamps();
 		});

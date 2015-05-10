@@ -29,6 +29,186 @@ class LookupTableSeeder extends Seeder {
                 'description'   => 'Female',
             ),
             array(
+                'keyword'       => 'level',
+                'description'   => 'Elementary Undergraduate',
+            ),
+            array(
+                'keyword'       => 'level',
+                'description'   => 'Elementary Graduate',
+            ),
+            array(
+                'keyword'       => 'level',
+                'description'   => 'High School Undergraduate',
+            ),
+            array(
+                'keyword'       => 'level',
+                'description'   => 'High School Graduate',
+            ),
+            array(
+                'keyword'       => 'level',
+                'description'   => 'College Undergraduate',
+            ),
+            array(
+                'keyword'       => 'level',
+                'description'   => 'College Graduate',
+            ),
+            array(
+                'keyword'       => 'level',
+                'description'   => 'Vocational Degree',
+            ),
+            array(
+                'keyword'       => 'level',
+                'description'   => 'Associate Degree',
+            ),
+            array(
+                'keyword'       => 'level',
+                'description'   => "Bachelor's Degree",
+            ),
+            array(
+                'keyword'       => 'level',
+                'description'   => "Master's Degree",
+            ),
+            array(
+                'keyword'       => 'level',
+                'description'   => "Professional Degree",
+            ),
+            array(
+                'keyword'       => 'level',
+                'description'   => "Doctorate Degree",
+            ),
+            array(
+                'keyword'       => 'fluency_level',
+                'description'   => 'No Proficiency',
+            ),
+            array(
+                'keyword'       => 'fluency_level',
+                'description'   => 'Elementary Proficiency',
+            ),
+            array(
+                'keyword'       => 'fluency_level',
+                'description'   => 'Limited Working Proficiency',
+            ),
+            array(
+                'keyword'       => 'fluency_level',
+                'description'   => 'Professional Working Proficiency',
+            ),
+            array(
+                'keyword'       => 'fluency_level',
+                'description'   => 'Full Professional Proficiency',
+            ),
+            array(
+                'keyword'       => 'fluency_level',
+                'description'   => 'Native or Bilingual Proficiency',
+            ),
+            array(
+                'keyword'       => 'language',
+                'description'   => 'Arabic',
+            ),
+            array(
+                'keyword'       => 'language',
+                'description'   => 'Bengali',
+            ),
+            array(
+                'keyword'       => 'language',
+                'description'   => 'Cantonese',
+            ),
+            array(
+                'keyword'       => 'language',
+                'description'   => 'Dutch',
+            ),
+            array(
+                'keyword'       => 'language',
+                'description'   => 'English',
+            ),
+            array(
+                'keyword'       => 'language',
+                'description'   => 'French',
+            ),
+            array(
+                'keyword'       => 'language',
+                'description'   => 'German',
+            ),
+            array(
+                'keyword'       => 'language',
+                'description'   => 'Greek',
+            ),
+            array(
+                'keyword'       => 'language',
+                'description'   => 'Hindi',
+            ),
+            array(
+                'keyword'       => 'language',
+                'description'   => 'Indonesian',
+            ),
+            array(
+                'keyword'       => 'language',
+                'description'   => 'Italian',
+            ),
+            array(
+                'keyword'       => 'language',
+                'description'   => 'Japanese',
+            ),
+            array(
+                'keyword'       => 'language',
+                'description'   => 'Javanese',
+            ),
+            array(
+                'keyword'       => 'language',
+                'description'   => 'Korean',
+            ),
+            array(
+                'keyword'       => 'language',
+                'description'   => 'Malay',
+            ),
+            array(
+                'keyword'       => 'language',
+                'description'   => 'Mandarin',
+            ),
+            array(
+                'keyword'       => 'language',
+                'description'   => 'Persian',
+            ),
+            array(
+                'keyword'       => 'language',
+                'description'   => 'Polish',
+            ),
+            array(
+                'keyword'       => 'language',
+                'description'   => 'Portuguese',
+            ),
+            array(
+                'keyword'       => 'language',
+                'description'   => 'Russian',
+            ),
+            array(
+                'keyword'       => 'language',
+                'description'   => 'Spanish',
+            ),
+            array(
+                'keyword'       => 'language',
+                'description'   => 'Swedish',
+            ),
+            array(
+                'keyword'       => 'language',
+                'description'   => 'Tagalog',
+            ),
+            array(
+                'keyword'       => 'language',
+                'description'   => 'Thai',
+            ),
+            array(
+                'keyword'       => 'language',
+                'description'   => 'Turkish',
+            ),
+            array(
+                'keyword'       => 'language',
+                'description'   => 'Ukranian',
+            ),
+            array(
+                'keyword'       => 'language',
+                'description'   => 'Vietnamese',
+            ),
+            array(
                 'keyword'       => 'marital_status',
                 'description'   => 'Single',
             ),

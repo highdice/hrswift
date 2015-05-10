@@ -17,9 +17,9 @@ class JobDetailsTableSeeder extends Seeder {
 	        'probation_date' => '2015-04-01',
 	        'permanency_date' => '2015-07-01',
 	        'job_title' => 'CEO',
-	        'employment_status' => 15,
-	        'work_shift' => 17,
-	        'department' => 29,
+	        'employment_status' => 60,
+	        'work_shift' => 62,
+	        'department' => 74,
 	    ));
 
 	    JobDetail::create(array(
@@ -28,9 +28,9 @@ class JobDetailsTableSeeder extends Seeder {
 	        'probation_date' => '2015-04-01',
 	        'permanency_date' => '2015-07-01',
 	        'job_title' => 'CEO',
-	        'employment_status' => 12,
-	        'work_shift' => 17,
-	        'department' => 22,
+	        'employment_status' => 57,
+	        'work_shift' => 62,
+	        'department' => 67,
 	    ));
 
 	    JobDetail::create(array(
@@ -39,9 +39,9 @@ class JobDetailsTableSeeder extends Seeder {
 	        'probation_date' => '2015-04-01',
 	        'permanency_date' => '2015-07-01',
 	        'job_title' => 'CEO',
-	        'employment_status' => 12,
-	        'work_shift' => 17,
-	        'department' => 23,
+	        'employment_status' => 57,
+	        'work_shift' => 62,
+	        'department' => 68,
 	    ));
 
 	}

@@ -28,18 +28,23 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
                         ->get([
                         	'id',
                         	'username',
-                        	'email'
+                        	'email',
                         ]);
 	}
 
 	public static function getSingle($id) {
-		return User::where('id', '=', $id)
+		$data = User::where('id', '=', $id)
 						->orderBy('id','desc')
                         ->first([
                         	'id',
                         	'username',
                         	'email',
                         ]);
+
+        array_add($data, 'company', Config::get('config.company'));
+        array_add($data, 'address', Config::get('config.address'));
+
+        return $data;
 	}
 
 	public static function authenticateUser($id) {
