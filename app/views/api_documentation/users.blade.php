@@ -408,7 +408,7 @@ HRSwift API Documentation
     <div id="section-5" class="col-lg-offset-2 col-lg-7 col-md-offset-2 col-md-7 col-sm-offset-2 col-sm-7 col-xs-12 section-container">
         <h3>Skills</h3>
 
-        <p class="section-description">This endpoint retrieves the work experience table's data</p>
+        <p class="section-description">This endpoint retrieves the skills table's data</p>
 
         <h4 class="endpoint-title">Endpoints</h4>
         <p>REQUEST TYPE: <span class="pill">GET</span></p>
@@ -558,7 +558,7 @@ HRSwift API Documentation
     <div id="section-8" class="col-lg-offset-2 col-lg-7 col-md-offset-2 col-md-7 col-sm-offset-2 col-sm-7 col-xs-12 section-container">
         <h3>Education</h3>
 
-        <p class="section-description">This endpoint retrieves the work experience table's data</p>
+        <p class="section-description">This endpoint retrieves the education table's data</p>
 
         <h4 class="endpoint-title">Endpoints</h4>
         <p>REQUEST TYPE: <span class="pill">GET</span></p>
@@ -606,7 +606,7 @@ HRSwift API Documentation
     <div id="section-9" class="col-lg-offset-2 col-lg-7 col-md-offset-2 col-md-7 col-sm-offset-2 col-sm-7 col-xs-12 section-container">
         <h3>Language</h3>
 
-        <p class="section-description">This endpoint retrieves the work experience table's data</p>
+        <p class="section-description">This endpoint retrieves the language table's data</p>
 
         <h4 class="endpoint-title">Endpoints</h4>
         <p>REQUEST TYPE: <span class="pill">GET</span></p>
@@ -657,7 +657,7 @@ HRSwift API Documentation
     <div id="section-10" class="col-lg-offset-2 col-lg-7 col-md-offset-2 col-md-7 col-sm-offset-2 col-sm-7 col-xs-12 section-container">
         <h3>Dependents</h3>
 
-        <p class="section-description">This endpoint retrieves the work experience table's data</p>
+        <p class="section-description">This endpoint retrieves the dependents table's data</p>
 
         <h4 class="endpoint-title">Endpoints</h4>
         <p>REQUEST TYPE: <span class="pill">GET</span></p>
