@@ -57,10 +57,10 @@ Route::filter('auth.basic', function()
 Route::filter('auth.login', function($route, $request)
 {
 	try {
-		/*
-	    $auth = base64_encode('admin:hrswiftadmin123');
-	    */
-	    $auth = $request->header('Authorization');
+		
+	    //$auth = base64_encode('admin:hrswiftadmin123');
+	    
+	    $auth = Request::header('Authorization');
 
 	    if($auth) {
 		    $data = base64_decode($auth);
@@ -97,7 +97,7 @@ Route::filter('auth.api', function()
   /*
   $username = 'developer';
   $user_id = base64_encode(3);
-  $api_key = '$2y$10$EV2xsyxUviTQJDBxRzC7lOl1oLKvNtPrm9cJMXRAGD6WzOe2qj9vm';
+  $api_key = '$2y$10$Y2ut5N7MUyhTdWZ.8veIueSe2yC6khoVVxRFLn.HTNwBIJXtYMeBm';
   */
 
   try {
