@@ -41,6 +41,15 @@ Route::group(array('before' => 'auth'), function()
 {
 	Route::get('dashboard', array('as' => 'dashboard', 'uses' => 'ViewController@dashboard'));
 
+	//Route for admin
+	Route::group(array('prefix' => 'admin'), function()
+	{
+		Route::get('/', array('as' => 'admin', 'uses' => 'ViewController@users'));
+		Route::get('/users', array('as' => 'users', 'uses' => 'ViewController@users'));
+		Route::get('/roles', array('as' => 'roles', 'uses' => 'ViewController@roles'));
+		Route::get('/permissions', array('as' => 'permissions', 'uses' => 'ViewController@permissions'));
+	});
+
 	//Route for leaves
 	Route::group(array('prefix' => 'leaves'), function()
 	{
@@ -65,7 +74,7 @@ Route::group(array('before' => 'auth.login', 'prefix' => 'api/v1'), function () 
 	Route::get('login', array('as' => 'api_login'));
 });
 
-Route::group(array('before' => 'auth.api', 'prefix' => 'api/v1'), function () {
+Route::group(array('prefix' => 'api/v1'), function () {
 	Route::resource('user', 'ApiUsersController');
 	Route::resource('user.contact_details', 'ApiContactDetailsController');
 	Route::resource('user.dependents', 'ApiDependentsController');
